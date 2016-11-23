@@ -18,7 +18,6 @@
 
 					<ul class="list-unstyled" style="margin-top: 30px;">
                     <li <?php if ( is_archive('forum')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url(bbp_get_root_slug())); ?>"><i class="fa fa-comments-o"></i> <?php _e( 'All Topics', 'bbpress' ); ?></a></li>
-                    <li <?php if ( bbp_is_single_view()) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url(bbp_get_root_slug(). '/view/no-replies')); ?>"><i class="fa fa-comment-o"></i> <?php _e( 'No Replies', 'bbpress' ); ?></a></li>
 					</ul>
 
 
@@ -43,8 +42,8 @@
 					<div class="btn-group text-left" role="group">
 						<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><?php _e( 'View', 'bbpress' ); ?> <span class="caret"></span></button>
 						<ul class="dropdown-menu">
-							<li><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>favorites/"> <?php _e( 'Favorites', 'bbpress' ); ?></a></li>
-							<li><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>subscriptions/"> <?php _e( 'Subscriptions', 'bbpress' ); ?></a></li>
+							<li><a href="<?php echo esc_url(home_url(bbp_get_root_slug(). '/view/popular')); ?>"> <?php _e( 'Most popular topics', 'bbpress' ); ?></a></li>
+							<li><a href="<?php echo esc_url(home_url(bbp_get_root_slug(). '/view/no-replies')); ?>"> <?php _e( 'Topics with no replies', 'bbpress' ); ?></a></li>
 						</ul>
 					</div>
 					<div class="pull-right">

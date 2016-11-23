@@ -20,7 +20,6 @@
 					<div class="lista_kategorija">
 					<ul class="list-inline" style="margin-top: 10px;">
 						<li <?php if ( is_archive('forum')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url(bbp_get_root_slug())); ?>"><i class="fa fa-comments-o"></i> <?php _e( 'All Topics', 'bbpress' ); ?></a></li>
-						<li <?php if ( bbp_is_single_view()) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url(bbp_get_root_slug(). '/view/no-replies')); ?>"><i class="fa fa-comment-o"></i> <?php _e( 'Topics with no replies', 'bbpress' ); ?></a></li>
 					</ul>
 					</div>
 				</div>

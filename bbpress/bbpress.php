@@ -11,7 +11,7 @@
     <?php the_title();?> - <?php bloginfo('name'); ?>
     <?php endif; ?>
     </title>
-    <?php wp_head(); ?>
+
     <meta name="revisit-after" content="1 days">
     <link rel="profile" href="http://gmpg.org/xfn/11" />
 

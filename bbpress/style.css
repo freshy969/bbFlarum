@@ -551,7 +551,6 @@ hr {
 }
 
 /* Paginacija na temama */
-
 .naziv .bbp-topic-pagination a {
     border-radius: 4px;
     padding: 1px 6px;
@@ -559,6 +558,7 @@ hr {
     font-weight: 400;
     color:#8C8C8C;
     border:1px solid #EDEDED;
+    background: #fff;
 }
 .naziv .bbp-topic-pagination a:hover {
     color:#fff;
@@ -749,10 +749,6 @@ a.favorite-toggle {
 }
 
 /* Lista kategorija */
-
-.lista_kategorija {
-    position: fixed;
-}
 .lista_kategorija i {
     font-size:16px;
     margin-right: 5px;
@@ -893,7 +889,7 @@ textarea#bbp_forum_content {
 /* Copyright */
 
 .copyright {
-    margin-top: 60px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
