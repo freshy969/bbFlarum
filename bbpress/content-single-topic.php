@@ -17,7 +17,7 @@
 <span class="tema_status">
 <?php do_action( 'bbp_theme_before_topic_title' ); ?>
 </span>
-<span class="kategorija text-uppercase"><a style="color: <?php echo get_field('color', bbp_get_topic_forum_id()); ?>;" href="<?php bbp_get_forum_permalink( bbp_get_topic_forum_id()) ?>"><?php echo bbp_get_forum_title( bbp_get_topic_forum_id()) ?></a></span>
+<span class="kategorija text-uppercase"><a style="color: <?php echo get_field('color', bbp_get_topic_forum_id()); ?>;" href="<?php echo bbp_get_forum_permalink( bbp_get_topic_forum_id()) ?>"><?php echo bbp_get_forum_title( bbp_get_topic_forum_id()) ?></a></span>
 <h1><?php echo bbp_get_topic_title(); ?></h1>
 </div>
 </div>
