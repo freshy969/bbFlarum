@@ -89,11 +89,22 @@ function revision_log( $r='' ) {
 add_filter( 'bbp_get_reply_revisions', 'revision_log', 20, 1 );
 add_filter( 'bbp_get_topic_revisions', 'revision_log', 20, 1 );
 
+// Sakrij crticu
 function sakrij_crticu($args = array() ) {
     $args['before'] = '';
     return $args;
 }
 add_filter ('bbp_before_get_forum_subscribe_link_parse_args', 'sakrij_crticu') ;
+
+// Automacki login
+function auto_login($user_id) {
+    wp_set_current_user($user_id);
+    wp_set_auth_cookie($user_id);
+    wp_new_user_notification( $user_id, null, 'both' );
+    wp_redirect(home_url(bbp_get_root_slug()));
+    exit;
+}
+add_action( 'user_register', 'auto_login' );
 
 
 
