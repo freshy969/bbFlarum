@@ -58,12 +58,10 @@
 </li>
 </ul>
 <?php else : ?>
-<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
-<div class="btn-group navbar-btn">
+<div class="btn-group navbar-btn pull-right hidden-xs hidden-sm">
 <a class="btn btn-default" href="<?php echo wp_login_url(); ?>"><?php _e( 'Log In', 'bbpress' ); ?></a>
 <a class="btn btn-danger" href="<?php echo wp_registration_url(); ?>"><?php _e( 'Register', 'bbpress' ); ?></a>
 </div>
-</ul>
 <?php endif; ?>
 
 </div>

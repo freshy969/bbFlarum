@@ -62,7 +62,7 @@ add_action( 'bbp_theme_after_topic_title', 'new_topic' );
 // Zatvoren topic
 function zakljucana_tema() {
     if ( bbp_is_topic_closed() && !bbp_is_topic_sticky() )
-        echo '<span class="status"><i data-toggle="tooltip" data-placement="top" title="'. translate( 'Locked', bbpress ) .'" class="fa fa-lock"></i>';
+        echo '<span class="status"><i data-toggle="tooltip" data-placement="top" title="'. translate( 'Locked', bbpress ) .'" class="fa fa-lock"></i></span>';
 }
 add_action( 'bbp_theme_before_topic_title', 'zakljucana_tema' );
 
