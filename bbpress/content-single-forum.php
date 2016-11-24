@@ -92,11 +92,16 @@
 
 				<?php if ( !bbp_is_forum_category() && bbp_has_topics() ) : ?>
 
+					<?php bbp_get_template_part( 'form',       'topic'     ); ?>
+
 					<?php bbp_get_template_part( 'loop',       'topics'    ); ?>
 
 					<?php bbp_get_template_part( 'pagination', 'topics'    ); ?>
 
 				<?php elseif ( !bbp_is_forum_category() ) : ?>
+
+					<?php bbp_get_template_part( 'form',       'topic'     ); ?>
+
 
 					<?php bbp_get_template_part( 'feedback',   'no-topics' ); ?>
 
@@ -110,5 +115,3 @@
 		</div>
 
 	</div>
-
-<?php bbp_get_template_part( 'form',       'topic'     ); ?>

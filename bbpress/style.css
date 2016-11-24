@@ -833,6 +833,7 @@ a.favorite-toggle {
     color:#fff;
     padding: 20px;
     border-radius: 4px;
+    margin-top: 20px;
 }
 .kategorije .kategorija:hover {
     opacity: 0.9;
