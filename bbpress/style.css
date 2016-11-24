@@ -892,6 +892,7 @@ a.favorite-toggle {
     border: 2px dashed #EDEDED;
     background: #fff;
     border-radius: 4px;
+    margin-bottom: 20px;
 }
 
 .odgovori_forma select, .bbp-form select {
