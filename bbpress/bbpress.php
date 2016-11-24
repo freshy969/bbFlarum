@@ -25,12 +25,10 @@
 <nav class="navbar navbar-default  navbar-fixed-top">
 <div class="container">
 <div class="navbar-header">
-
-    <div class="btn-group navbar-btn navbar-toggle">
-        <a class="btn btn-default" href="<?php echo wp_login_url(); ?>"><?php _e( 'Log In', 'bbpress' ); ?></a>
-        <a class="btn btn-danger" href="<?php echo wp_registration_url(); ?>"><?php _e( 'Register', 'bbpress' ); ?></a>
-    </div>
-
+<div class="btn-group navbar-btn navbar-toggle">
+<a class="btn btn-default" href="<?php echo wp_login_url(); ?>"><?php _e( 'Log In', 'bbpress' ); ?></a>
+<a class="btn btn-danger" href="<?php echo wp_registration_url(); ?>"><?php _e( 'Register', 'bbpress' ); ?></a>
+</div>
 <a class="navbar-brand" href="<?php echo esc_url(home_url(bbp_get_root_slug())); ?>" title="<?php bloginfo('name'); ?>" data-toggle="tooltip" data-placement="bottom"></a>
 </div>
 
@@ -120,7 +118,6 @@ ias.extension(new IASSpinnerExtension({
     });
 
 </script>
-
 
 </body>
 </html>
