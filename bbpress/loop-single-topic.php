@@ -22,11 +22,19 @@
 </div>
 
 <div class="pull-right">
-<?php printf( __( '<span class="kategorija" style="background: %3$s;"><a href="%1$s">%2$s</a></span>', 'bbpress' ), bbp_get_forum_permalink( bbp_get_topic_forum_id() ), bbp_get_forum_title( bbp_get_topic_forum_id() ), get_field('color', bbp_get_topic_forum_id()) ); ?>
+<?php if ( !bbp_is_single_forum() || ( bbp_get_topic_forum_id() !== bbp_get_forum_id() ) ) : ?>
+<?php do_action( 'bbp_theme_before_topic_started_in' ); ?>
+<span class="kategorija" style="background: <?php echo get_field('color', bbp_get_topic_forum_id()) ?>;"><a href="<?php echo bbp_get_forum_permalink( bbp_get_topic_forum_id() ) ?>"><?php echo bbp_get_forum_title( bbp_get_topic_forum_id() ) ?></a></span>
+<?php do_action( 'bbp_theme_after_topic_started_in' ); ?>
+<?php endif; ?>
+
+
+
 <span class="odgovora">
 <i class="fa fa-comment-o" aria-hidden="true"></i>
 <?php bbp_show_lead_topic() ? bbp_topic_reply_count() : bbp_topic_post_count(); ?>
 </span>
+
 <?php if ( is_user_logged_in() ) : ?>
 <span class="omiljeno">
 <div class="dropdown pull-right">
@@ -40,6 +48,7 @@
 </div>
 </span>
 <?php endif; ?>
+
 </div>
 
 <div class="naziv">

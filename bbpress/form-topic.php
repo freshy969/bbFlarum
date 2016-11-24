@@ -112,18 +112,18 @@
 
 		<?php endif; ?>
 
-<!--		--><?php //if ( bbp_allow_topic_tags() && current_user_can( 'assign_topic_tags' ) ) : ?>
-<!---->
-<!--			--><?php //do_action( 'bbp_theme_before_topic_form_tags' ); ?>
-<!---->
-<!--			<div class="form-group">-->
-<!--				<label for="bbp_topic_tags">--><?php //_e( 'Topic Tags:', 'bbpress' ); ?><!--</label><br />-->
-<!--				<input type="text" value="--><?php //bbp_form_topic_tags(); ?><!--" tabindex="--><?php //bbp_tab_index(); ?><!--" size="40" name="bbp_topic_tags" id="bbp_topic_tags" --><?php //disabled( bbp_is_topic_spam() ); ?><!-- class="form-control" />-->
-<!--			</div>-->
-<!---->
-<!--			--><?php //do_action( 'bbp_theme_after_topic_form_tags' ); ?>
-<!---->
-<!--		--><?php //endif; ?>
+		<?php if ( bbp_allow_topic_tags() && current_user_can( 'assign_topic_tags' ) ) : ?>
+
+			<?php do_action( 'bbp_theme_before_topic_form_tags' ); ?>
+
+			<div class="form-group">
+				<label for="bbp_topic_tags"><?php _e( 'Topic Tags:', 'bbpress' ); ?></label><br />
+				<input type="text" value="<?php bbp_form_topic_tags(); ?>" tabindex="<?php bbp_tab_index(); ?>" size="40" name="bbp_topic_tags" id="bbp_topic_tags" <?php disabled( bbp_is_topic_spam() ); ?> class="form-control" />
+			</div>
+
+			<?php do_action( 'bbp_theme_after_topic_form_tags' ); ?>
+
+		<?php endif; ?>
 
 		<?php if ( current_user_can( 'moderate' ) ) : ?>
 			<div class="row">
@@ -235,50 +235,3 @@
 <?php if ( !bbp_is_single_forum() ) : ?>
 
 <?php endif; ?>
-
-
-<style>
-	.quicktags-toolbar{ border-bottom:none;background:#fff;border-top:1px solid #E8E8E8;border-left:1px solid #E8E8E8;border-right:1px solid #E8E8E8; }
-	.wp-editor-area { border:1px solid #E8E8E8; }
-	#wp-bbp_reply_content-editor-container .button {
-		background-color: #fff;
-		color: #999;
-		border-color: #E8E8E8;
-		border-radius:0px;
-		-webkit-box-shadow: none;
-		box-shadow: none;
-		-webkit-transition: none;
-		-o-transition: none;
-		transition: none; }
-	#wp-bbp_reply_content-editor-container .button:hover {
-		background-color: #fff;
-		color: #000;
-		border-color: #E8E8E8;
-		border-radius:0px;
-		-webkit-box-shadow: none;
-		box-shadow: none;
-		-webkit-transition: none;
-		-o-transition: none;
-		transition: none; }
-	#wp-bbp_topic_content-editor-container .button {
-		background-color: #fff;
-		color: #999;
-		border-color: #E8E8E8;
-		border-radius:0px;
-		-webkit-box-shadow: none;
-		box-shadow: none;
-		-webkit-transition: none;
-		-o-transition: none;
-		transition: none; }
-	#wp-bbp_topic_content-editor-container .button:hover {
-		background-color: #fff;
-		color: #000;
-		border-color: #E8E8E8;
-		border-radius:0px;
-		-webkit-box-shadow: none;
-		box-shadow: none;
-		-webkit-transition: none;
-		-o-transition: none;
-		transition: none; }
-</style>
-

@@ -11,7 +11,17 @@
 
 		<div class="row">
 
-			<div class="col-md-2">
+			<div class="col-md-12 hidden-md hidden-lg">
+				<a class="btn btn-danger zapocni-temu pull-left" style="background:<?php echo get_field('color', bbp_get_topic_forum_id()) ?>; border-color:<?php echo get_field('color', bbp_get_topic_forum_id()) ?>;" href="<?php echo esc_url( bbp_get_forum_permalink()); ?>#new-post "><?php _e( 'Create New Topic', 'bbpress' ); ?></a>
+				<form role="search" method="get" id="bbp-searchform" action="<?php echo esc_url( home_url(bbp_get_root_slug()) ); ?>" class="pretraga pull-right">
+					<div class="form-group has-feedback has-feedback-left">
+						<input data-toggle="tooltip" data-placement="top" title="<?php _e( 'Search', 'bbpress' ); ?>" type="text" name="ts" id="ts" style="width: 100%" class="form-control">
+						<span class="fa fa-search form-control-feedback" aria-hidden="true"></span>
+					</div>
+				</form>
+			</div>
+
+			<div class="col-md-2 hidden-xs hidden-sm">
 				<div class="lista_kategorija">
 
 					<a class="btn btn-danger btn-block zapocni-temu" href="<?php echo esc_url( home_url(bbp_get_root_slug(). '/view/no-replies')); ?>/#new-post "><?php _e( 'Create New Topic', 'bbpress' ); ?></a>
@@ -36,8 +46,10 @@
 				</div>
 			</div>
 
-			<div class="col-md-10">
+			<div class="col-md-10 col-xs-12 col-sm-12">
 
+				<div class="row">
+					<div class="col-md-12">
 				<div class="izaberi">
 					<div class="btn-group text-left" role="group">
 						<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><?php _e( 'View', 'bbpress' ); ?> <span class="caret"></span></button>
@@ -50,6 +62,9 @@
 						<a class="btn btn-default" href="#" role="button" onclick="location.reload(true); return false;"><i class="fa fa-refresh" aria-hidden="true"></i></a>
 					</div>
 				</div>
+					</div>
+				</div>
+
 
 				<?php bbp_set_query_name( bbp_get_view_rewrite_id() ); ?>
 

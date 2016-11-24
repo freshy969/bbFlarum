@@ -30,13 +30,19 @@
 <nav class="navbar navbar-default  navbar-fixed-top">
 <div class="container">
 <div class="navbar-header">
-<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navmeni">Meni <i class="fa fa-bars" aria-hidden="true"></i></button>
+
+    <div class="btn-group navbar-btn navbar-toggle">
+        <a class="btn btn-default" href="<?php echo wp_login_url(); ?>"><?php _e( 'Log In', 'bbpress' ); ?></a>
+        <a class="btn btn-danger" href="<?php echo wp_registration_url(); ?>"><?php _e( 'Register', 'bbpress' ); ?></a>
+    </div>
+
 <a class="navbar-brand" href="<?php echo esc_url(home_url(bbp_get_root_slug())); ?>" title="<?php bloginfo('name'); ?>" data-toggle="tooltip" data-placement="bottom"></a>
 </div>
+
 <div class="collapse navbar-collapse" id="navmeni">
 
 <?php if ( bbp_allow_search() ) : ?>
-<form role="search" method="get" id="bbp-searchform" action="<?php echo esc_url( home_url(bbp_get_root_slug()) ); ?>" class="pretraga navbar-form navbar-nav">
+<form role="search" method="get" id="bbp-searchform" action="<?php echo esc_url( home_url(bbp_get_root_slug()) ); ?>" class="pretraga navbar-form navbar-nav hidden-xs hidden-sm">
 <div class="form-group has-feedback has-feedback-left">
 <input data-toggle="tooltip" data-placement="right" title="<?php _e( 'Search', 'bbpress' ); ?>" type="text" name="ts" id="ts" size="30" class="form-control">
 <span class="fa fa-search form-control-feedback" aria-hidden="true"></span>
@@ -45,7 +51,7 @@
 <?php endif; ?>
 
 <?php if (is_user_logged_in()) : ?>
-<ul class="nav navbar-nav navbar-right">
+<ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
 <li class="dropdown">
 <a href="#" class="dropdown-toggle navbar-gravatar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 <?php global $current_user; get_currentuserinfo(); echo get_avatar($current_user->user_email, 34 ); ?> <?php echo $current_user->display_name; ?>
@@ -59,10 +65,12 @@
 </li>
 </ul>
 <?php else : ?>
-<div class="btn-group pull-right navbar-btn navbar-nav">
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+<div class="btn-group navbar-btn">
 <a class="btn btn-default" href="<?php echo wp_login_url(); ?>"><?php _e( 'Log In', 'bbpress' ); ?></a>
 <a class="btn btn-danger" href="<?php echo wp_registration_url(); ?>"><?php _e( 'Register', 'bbpress' ); ?></a>
 </div>
+</ul>
 <?php endif; ?>
 
 </div>
@@ -103,18 +111,8 @@ ias.extension(new IASSpinnerExtension({
             if(window.location.href.indexOf("#new-post") > -1) {
                 $("#new-post").fadeToggle();
             }
-            $(".bbp-topic-reply-link").click(function() {
-                $("#new-post").fadeToggle();
-            });
-            $(".bbp-reply-to-link").click(function() {
-                $("#new-post").fadeToggle();
-            });
             $(".zapocni-temu").click(function() {
                 $("#new-post").fadeToggle();
-            });
-            $("body").mouseup(function(e) {
-                var subject = $("#new-post");
-                if(e.target.id != subject.attr('id') && !subject.has(e.target).length) { subject.fadeOut(); }
             });
         });
 </script>

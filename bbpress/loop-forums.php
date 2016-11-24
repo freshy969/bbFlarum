@@ -16,7 +16,6 @@
 
 		<div class="row">
 
-
 		<?php while ( bbp_forums() ) : bbp_the_forum(); ?>
 			<div class="col-md-4">
 			<?php bbp_get_template_part( 'loop', 'single-forum' ); ?>

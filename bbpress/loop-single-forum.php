@@ -11,7 +11,7 @@
 
 	<div class="kategorije">
 
-		<?php printf( __( '<div class="kategorija" style="background: %3$s;">', 'bbpress' ), bbp_get_forum_permalink( bbp_get_topic_forum_id() ), bbp_get_forum_title( bbp_get_topic_forum_id() ), get_field('color', bbp_get_topic_forum_id()) ); ?>
+		<div class="kategorija" style="background: <?php echo get_field('color', bbp_get_topic_forum_id()) ?>;">
 
 		<div class="naziv">
 
