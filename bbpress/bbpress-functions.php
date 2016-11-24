@@ -84,11 +84,17 @@ add_action( 'bbp_theme_before_topic_title', 'izdvojena_zakljucana' );
 function revision_log( $r='' ) {
     $arr = array( end( $r ));
     reset( $r );
-
     return( $arr );
 }
-
 add_filter( 'bbp_get_reply_revisions', 'revision_log', 20, 1 );
 add_filter( 'bbp_get_topic_revisions', 'revision_log', 20, 1 );
+
+function sakrij_crticu($args = array() ) {
+    $args['before'] = '';
+    return $args;
+}
+add_filter ('bbp_before_get_forum_subscribe_link_parse_args', 'sakrij_crticu') ;
+
+
 
 ?>
