@@ -45,4 +45,18 @@ function bbp_enable_visual_editor( $args = array() ) {
 }
 add_filter( 'bbp_after_get_the_content_parse_args', 'bbp_enable_visual_editor' );
 
+function login_page_custom_url() {
+    return home_url(bbp_get_root_slug());
+}
+add_filter('login_headerurl', 'login_page_custom_url');
+
+function login_logo() {
+echo "<style>
+body.login { background-color: #fff; }
+body.login #login h1 a { background: url('".get_template_directory_uri()."/bbpress/img/logo.png') no-repeat scroll center transparent; width:auto; }
+</style>";
+}
+add_action("login_head", "login_logo");
+
+
 ?>
