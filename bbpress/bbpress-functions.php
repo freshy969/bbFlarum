@@ -10,22 +10,6 @@ function short_freshness_time( $output) {
 add_filter( 'bbp_get_time_since', 'short_freshness_time' );
 add_filter('bp_core_time_since', 'short_freshness_time');
 
-// Zatvoren topic
-function closed_topics() {
-    $topic_id = bbp_get_topic_id();
-    if ( get_post_type( $topic_id ) == bbp_get_topic_post_type() && bbp_is_topic_closed( $topic_id ) )
-        echo '<i data-toggle="tooltip" data-placement="top" title="Zaključana" class="fa fa-lock"></i>';
-}
-add_action( 'bbp_theme_before_topic_title', 'closed_topics' );
-
-// Izdvojen topic
-function sticky_topics() {
-    $topic_id = bbp_get_topic_id();
-    if ( get_post_type( $topic_id ) == bbp_get_topic_post_type() && bbp_is_topic_sticky( $topic_id ) )
-        echo '<i data-toggle="tooltip" data-placement="top" title="Izdvojena" class="fa fa-thumb-tack"></i>';
-}
-add_action( 'bbp_theme_before_topic_title', 'sticky_topics' );
-
 // Login redirekcija
 function login_redirect( $redirect_to, $request, $user ) {
     return home_url(bbp_get_root_slug());
@@ -34,14 +18,13 @@ add_filter( 'login_redirect', 'login_redirect', 10, 3 );
 
 
 // Samo administratorima dozvoljen wp-admin
-function redirect_non_admin_users() {
-    if (!current_user_can('manage_options') && '/wp-admin/admin-ajax.php' != $_SERVER['PHP_SELF']) {
+function redirect_non_admin_users(){
+    if ( !current_user_can('edit_posts') ){
         wp_redirect(home_url(bbp_get_root_slug()));
         exit;
     }
 }
-add_action('admin_init', 'redirect_non_admin_users');
-
+add_action( 'admin_init', 'redirect_non_admin_users' );
 
 // Logo na login stranici link
 function login_page_custom_url() {
@@ -66,5 +49,46 @@ function bbp_enable_visual_editor( $args = array() ) {
     return $args;
 }
 add_filter( 'bbp_after_get_the_content_parse_args', 'bbp_enable_visual_editor' );
+
+// Nova tema
+function new_topic() {
+    $offset = 60*60*1;
+    if ( get_post_time() > date('U') - $offset )
+        echo '<span class="novo text-uppercase">'. translate( 'New Topic', bbpress ) .'</span>';
+}
+add_action( 'bbp_theme_after_topic_title', 'new_topic' );
+
+
+// Zatvoren topic
+function zakljucana_tema() {
+    if ( bbp_is_topic_closed() && !bbp_is_topic_sticky() )
+        echo '<span class="status"><i data-toggle="tooltip" data-placement="top" title="'. translate( 'Locked', bbpress ) .'" class="fa fa-lock"></i>';
+}
+add_action( 'bbp_theme_before_topic_title', 'zakljucana_tema' );
+
+// Izdvojen topic
+function izdvojena_tema() {
+    if ( bbp_is_topic_sticky() && !bbp_is_topic_closed() )
+        echo '<span class="status"><i data-toggle="tooltip" data-placement="top" title="'. translate( 'Sticky', bbpress ) .'" class="fa fa-thumb-tack"></i></span>';
+}
+add_action( 'bbp_theme_before_topic_title', 'izdvojena_tema' );
+
+// Izdvojena i zakljucana
+function izdvojena_zakljucana() {
+    if ( bbp_is_topic_sticky() && bbp_is_topic_closed() )
+        echo '<span class="status"><i data-toggle="tooltip" data-placement="top" title="'. translate( 'Announcement', bbpress ) .'" class="fa fa-bullhorn"></i></span>';
+}
+add_action( 'bbp_theme_before_topic_title', 'izdvojena_zakljucana' );
+
+// Samo jedan revision
+function revision_log( $r='' ) {
+    $arr = array( end( $r ));
+    reset( $r );
+
+    return( $arr );
+}
+
+add_filter( 'bbp_get_reply_revisions', 'revision_log', 20, 1 );
+add_filter( 'bbp_get_topic_revisions', 'revision_log', 20, 1 );
 
 ?>

@@ -311,7 +311,7 @@ hr {
     background: #FFC03B;
     border: 1px solid #FFC03B;
     opacity: 0.9;
-
+    filter: alpha(opacity=90);
 }
 .btn-danger,
 .btn-danger:focus,
@@ -367,6 +367,7 @@ hr {
 .form-control::-moz-placeholder {
     color: #8C8C8C;
     opacity: 1;
+    filter: alpha(opacity=100);
 }
 .form-control:-ms-input-placeholder { color: #8C8C8C }
 .form-control::-webkit-input-placeholder { color: #8C8C8C }
@@ -461,6 +462,17 @@ hr {
 }
 
 /* Status */
+.teme .status .fa-bullhorn {
+    position: absolute;
+    top:-1px;
+    left:44px;
+    color: #fff;
+    background: #48BF83;
+    border-radius: 50%;
+    padding: 3px 4px;
+    border:2px solid #fff;
+    font-size:14px;
+}
 .teme .status .fa-thumb-tack {
      position: absolute;
      top:-1px;
@@ -483,6 +495,17 @@ hr {
     padding: 3px 6px;
     border:2px solid #fff;
     font-size:14px;
+}
+
+.teme .novo {
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size:11px;
+    font-weight: 600;
+    color: #fff;
+    background: #48BF83;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 /* Naslov */
@@ -524,6 +547,7 @@ hr {
 }
 .teme .kategorija:hover {
     opacity: 0.9;
+    filter: alpha(opacity=90);
 }
 /* Odgovora */
 .teme .odgovora {
@@ -594,6 +618,15 @@ hr {
 .prvi_odgovor:first-child .odgovori {
     padding: 0px;
     border-bottom:none;
+}
+
+.tema_status .fa-bullhorn {
+    color: #fff;
+    background: #48BF83;
+    border-radius: 50%;
+    padding: 3px 4px;
+    border:2px solid #fff;
+    font-size:14px;
 }
 
 .tema_status .fa-thumb-tack {
@@ -837,6 +870,7 @@ a.favorite-toggle {
 }
 .kategorije .kategorija:hover {
     opacity: 0.9;
+    filter: alpha(opacity=90);
 }
 
 .kategorije .kategorija .naziv a {
@@ -847,16 +881,19 @@ a.favorite-toggle {
 .kategorije .kategorija .opis {
     color: #fff;
     opacity: 0.7;
+    filter: alpha(opacity=70);
     margin-top: 5px;
 }
 
 .kategorije .kategorija .pod_kategorije {
     color: #fff;
     opacity: 0.7;
+    filter: alpha(opacity=70);
 }
 
 .kategorije hr {
     opacity: 0.2;
+    filter: alpha(opacity=20);
 }
 
 .bbp-forums-list {
@@ -893,6 +930,21 @@ a.favorite-toggle {
     background: #fff;
     border-radius: 4px;
     margin-bottom: 20px;
+}
+
+.zatvori {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    padding: 0px 7px;
+    margin-top: -15px;
+    margin-right: -15px;
+}
+.zatvori:hover,
+.zatvori:focus {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    cursor: pointer;
 }
 
 .odgovori_forma select, .bbp-form select {

@@ -112,6 +112,13 @@ ias.extension(new IASSpinnerExtension({
                 $("#new-post").fadeToggle();
             });
         });
+
+    $(document).ready(function() {
+        $(".zatvori").click(function() {
+            $("#new-post").fadeOut();
+        });
+    });
+
 </script>
 
 

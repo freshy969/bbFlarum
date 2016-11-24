@@ -52,8 +52,9 @@
 </div>
 
 <div class="naziv">
-<a href="<?php bbp_topic_permalink(); ?>"><?php bbp_topic_title(); ?></a> <?php bbp_topic_pagination(); ?>
+<a href="<?php bbp_topic_permalink(); ?>"><?php bbp_topic_title(); ?></a>
 <?php do_action( 'bbp_theme_after_topic_title' ); ?>
+<?php bbp_topic_pagination(); ?>
 </div>
 
 <p>

@@ -50,6 +50,11 @@
 	<form name="new-post" method="post" action="<?php the_permalink(); ?>"  class="odgovori_forma">
 	<?php else: ?>
 		<form id="new-post" name="new-post" method="post" action="<?php the_permalink(); ?>"  class="odgovori_forma">
+            <div class="row">
+            <div class="col-md-12">
+            <div class="zatvori pull-right">&times;</div>
+            </div>
+            </div>
 	<?php endif; ?>
 		<?php do_action( 'bbp_theme_before_topic_form' ); ?>
 
