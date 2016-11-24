@@ -72,7 +72,7 @@
 			<button class="btn btn-default btn-block"><?php bbp_user_favorites_link(); ?></button>
 			<?php if ( bbp_allow_topic_tags() ) : ?>
 				<div class="naslovi" style="margin-top: 30px;">
-					<h3 class="text-uppercase">Oznake</h3><hr>
+					<h3 class="text-uppercase"><?php _e( 'Tags:', 'bbpress' ); ?></h3><hr>
 					<span class="oznake">
 				<?php $args = array('before' => '', 'sep' => '', 'after' => ''); bbp_topic_tag_list( '', $args ); ?>
 			</span>
