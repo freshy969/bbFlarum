@@ -1,6 +1,6 @@
 <?php
 
-
+// Time
 add_filter('show_admin_bar', '__return_false');
 
 function short_freshness_time( $output) {
@@ -10,6 +10,7 @@ function short_freshness_time( $output) {
 add_filter( 'bbp_get_time_since', 'short_freshness_time' );
 add_filter('bp_core_time_since', 'short_freshness_time');
 
+// Zatvoren topic
 function closed_topics() {
     $topic_id = bbp_get_topic_id();
     if ( get_post_type( $topic_id ) == bbp_get_topic_post_type() && bbp_is_topic_closed( $topic_id ) )
@@ -17,6 +18,7 @@ function closed_topics() {
 }
 add_action( 'bbp_theme_before_topic_title', 'closed_topics' );
 
+// Izdvojen topic
 function sticky_topics() {
     $topic_id = bbp_get_topic_id();
     if ( get_post_type( $topic_id ) == bbp_get_topic_post_type() && bbp_is_topic_sticky( $topic_id ) )
@@ -24,11 +26,14 @@ function sticky_topics() {
 }
 add_action( 'bbp_theme_before_topic_title', 'sticky_topics' );
 
+// Login redirekcija
 function login_redirect( $redirect_to, $request, $user ) {
     return home_url(bbp_get_root_slug());
 }
 add_filter( 'login_redirect', 'login_redirect', 10, 3 );
 
+
+// Samo administratorima dozvoljen wp-admin
 function redirect_non_admin_users() {
     if (!current_user_can('manage_options') && '/wp-admin/admin-ajax.php' != $_SERVER['PHP_SELF']) {
         wp_redirect(home_url(bbp_get_root_slug()));
@@ -37,19 +42,14 @@ function redirect_non_admin_users() {
 }
 add_action('admin_init', 'redirect_non_admin_users');
 
-function bbp_enable_visual_editor( $args = array() ) {
-    $args['tinymce'] = true;
-    $args['quicktags'] = false;
 
-    return $args;
-}
-add_filter( 'bbp_after_get_the_content_parse_args', 'bbp_enable_visual_editor' );
-
+// Logo na login stranici link
 function login_page_custom_url() {
     return home_url(bbp_get_root_slug());
 }
 add_filter('login_headerurl', 'login_page_custom_url');
 
+// Logo na login stranici
 function login_logo() {
 echo "<style>
 body.login { background-color: #fff; }
@@ -58,5 +58,13 @@ body.login #login h1 a { background: url('".get_template_directory_uri()."/bbpre
 }
 add_action("login_head", "login_logo");
 
+// Ediotor
+function bbp_enable_visual_editor( $args = array() ) {
+    $args['tinymce'] = true;
+    $args['quicktags'] = false;
+
+    return $args;
+}
+add_filter( 'bbp_after_get_the_content_parse_args', 'bbp_enable_visual_editor' );
 
 ?>
