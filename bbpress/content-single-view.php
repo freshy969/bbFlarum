@@ -11,15 +11,6 @@
 
 		<div class="row">
 
-			<div class="col-md-12 hidden-md hidden-lg">
-				<a class="btn btn-danger zapocni-temu pull-left" style="background:<?php echo get_field('color', bbp_get_topic_forum_id()) ?>; border-color:<?php echo get_field('color', bbp_get_topic_forum_id()) ?>;" href="<?php echo esc_url( bbp_get_forum_permalink()); ?>#new-post "><?php _e( 'Create New Topic', 'bbpress' ); ?></a>
-				<form role="search" method="get" id="bbp-searchform" action="<?php echo esc_url( home_url(bbp_get_root_slug()) ); ?>" class="pretraga pull-right">
-					<div class="form-group has-feedback has-feedback-left">
-						<input data-toggle="tooltip" data-placement="top" title="<?php _e( 'Search', 'bbpress' ); ?>" type="text" name="ts" id="ts" style="width: 100%" class="form-control">
-						<span class="fa fa-search form-control-feedback" aria-hidden="true"></span>
-					</div>
-				</form>
-			</div>
 
 			<div class="col-md-2 hidden-xs hidden-sm">
 				<div class="lista_kategorija">
@@ -50,18 +41,34 @@
 
 				<div class="row">
 					<div class="col-md-12">
-				<div class="izaberi">
-					<div class="btn-group text-left" role="group">
-						<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><?php _e( 'View', 'bbpress' ); ?> <span class="caret"></span></button>
-						<ul class="dropdown-menu">
-							<li><a href="<?php echo esc_url(home_url(bbp_get_root_slug(). '/view/popular')); ?>"> <?php _e( 'Most popular topics', 'bbpress' ); ?></a></li>
-							<li><a href="<?php echo esc_url(home_url(bbp_get_root_slug(). '/view/no-replies')); ?>"> <?php _e( 'Topics with no replies', 'bbpress' ); ?></a></li>
-						</ul>
-					</div>
-					<div class="pull-right">
-						<a class="btn btn-default" href="#" role="button" onclick="location.reload(true); return false;"><i class="fa fa-refresh" aria-hidden="true"></i></a>
-					</div>
-				</div>
+						<div class="izaberi">
+
+					 <span class="btn-group hidden-md hidden-lg" role="group">
+                    <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><i class="fa fa-th-large" aria-hidden="true"></i></button>
+                    <ul class="dropdown-menu">
+                    <?php query_posts(array('post_type' => bbp_get_forum_post_type(), 'orderby' => 'menu_order', 'order' => 'asc',));
+					if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<li><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><span class="kategorija" style="background: <?php echo get_field("color"); ?>"></span> <?php the_title(); ?></a></li>
+					<?php endwhile; ?>
+					<?php endif; ?>
+						<?php wp_reset_query(); ?>
+                    </ul>
+                </span>
+
+							<a class="btn btn-danger zapocni-temu  hidden-md hidden-lg" href="/#new-post"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
+
+
+							<span class="btn-group" role="group">
+                    <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><?php _e( 'View', 'bbpress' ); ?> <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+						<li><a href="<?php echo esc_url(home_url(bbp_get_root_slug(). '/view/popular')); ?>"> <?php _e( 'Most popular topics', 'bbpress' ); ?></a></li>
+						<li><a href="<?php echo esc_url(home_url(bbp_get_root_slug(). '/view/no-replies')); ?>"> <?php _e( 'Topics with no replies', 'bbpress' ); ?></a></li>
+                    </ul>
+                </span>
+							<div class="pull-right">
+								<a class="btn btn-default" href="#" role="button" onclick="location.reload(true); return false;"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+							</div>
+						</div>
 					</div>
 				</div>
 

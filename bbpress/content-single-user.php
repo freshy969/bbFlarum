@@ -12,7 +12,7 @@
 </div>
 	<div class="naslov">
 		<div class="container">
-			<div class="pull-left" style="margin-right:25px;">
+			<div class="pull-left">
 			<a class="img-responsive avatar" href="<?php bbp_user_profile_url(); ?>" title="<?php bbp_displayed_user_field( 'display_name' ); ?>" rel="me">
 				<?php echo get_avatar( bbp_get_displayed_user_field( 'user_email', 'raw' ), apply_filters( 'bbp_single_user_details_avatar_size', 100 ) ); ?>
 			</a>
@@ -31,7 +31,7 @@
 		<div class="col-md-2">
 
 			<div class="naslovi">
-				<h3 class="text-uppercase">Quick navigation</h3><hr>
+				<h3 class="text-uppercase"><?php _e( 'Menus', 'bbpress' ); ?></h3><hr>
 			</div>
 
 			<?php bbp_get_template_part( 'user', 'details' ); ?>

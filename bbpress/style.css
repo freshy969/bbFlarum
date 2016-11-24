@@ -671,7 +671,6 @@ a.bbp-reply-to-link {
 /* Naslov */
 .naslov {
     margin-top: -60px;
-
     padding-top: 40px;
     padding-bottom: 40px;
     background: #689578;
@@ -698,6 +697,7 @@ a.bbp-reply-to-link {
 }
 
 .naslov .avatar img {
+    margin-right: 25px;
     border-radius:50%;
     padding: 5px;
     background: #fff;
@@ -906,7 +906,7 @@ a.favorite-toggle {
     background-color: #fff;
     border: 1px solid #EDEDED;
 }
- 
+
 /*textarea#bbp_reply_content,*/
 /*textarea#bbp_topic_content,*/
 /*textarea#bbp_forum_content {*/
