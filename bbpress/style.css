@@ -1,7 +1,7 @@
 html,
 body {
     font-family: 'Open Sans', sans-serif;
-    color: #596672;
+    color: #000;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -653,13 +653,23 @@ hr {
     margin-bottom: 20px;
 }
 
-.odgovori .poruka .tekst {
-    margin-top: 15px;
-    font-size: 16px;
-    color: #000;
+.odgovori .poruka {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
     word-break: break-all;
 }
+.odgovori .poruka img {
+    max-width: 100%;
+    max-height: 100%;
+    margin:auto;
+}
 
+.odgovori .poruka iframe {
+    max-width: 100%;
+    max-height: 100%;
+    margin:auto;
+}
 /* Izmene */
 
 .bbp-topic-revision-log, .bbp-reply-revision-log {
@@ -686,15 +696,16 @@ hr {
 /* Ime */
 
 .odgovori .ime {
+    margin-top: 8px;
     font-size: 16px;
     font-weight: 600;
-    margin-right:5px;
 }
 
-.odgovori .vreme {
+.odgovori .ime .vreme {
     font-weight: 400;
     color:#ccc;
     font-size: 14px;
+    margin-left: 5px;
 }
 
 a.bbp-reply-to-link {

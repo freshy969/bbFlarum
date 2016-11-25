@@ -106,6 +106,4 @@ function auto_login($user_id) {
 }
 add_action( 'user_register', 'auto_login' );
 
-
-
 ?>

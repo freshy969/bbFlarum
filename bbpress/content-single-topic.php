@@ -64,23 +64,18 @@
 
 		<div class="col-md-2 col-xs-12 col-sm-12">
 
-			<div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
-
 			<a class="btn btn-warning btn-block zapocni-temu" href="<?php bbp_get_reply_to_link() ?> #new-post" style="background: <?php echo get_field('color', bbp_get_topic_forum_id()); ?>;border-color:<?php echo get_field('color', bbp_get_topic_forum_id()); ?>; "><?php _e( 'Reply', 'bbpress' ); ?></a>
-				<?php if ( is_user_logged_in() ) : ?>
-
+			<?php if ( is_user_logged_in() ) : ?>
 			<button class="btn btn-default btn-block"><?php bbp_user_favorites_link(); ?></button>
 			<?php if ( bbp_allow_topic_tags() ) : ?>
-				<div class="naslovi" style="margin-top: 30px;">
-					<h3 class="text-uppercase"><?php _e( 'Tags:', 'bbpress' ); ?></h3><hr>
-					<span class="oznake">
-				<?php $args = array('before' => '', 'sep' => '', 'after' => ''); bbp_topic_tag_list( '', $args ); ?>
+			<div class="naslovi" style="margin-top: 30px;">
+			<h3 class="text-uppercase"><?php _e( 'Tags:', 'bbpress' ); ?></h3><hr>
+			<span class="oznake">
+			<?php $args = array('before' => '', 'sep' => '', 'after' => ''); bbp_topic_tag_list( '', $args ); ?>
 			</span>
-				</div>
-			<?php endif; ?>
-
-				<?php endif; ?>
 			</div>
+			<?php endif; ?>
+			<?php endif; ?>
 		</div>
 
 	</div>
