@@ -16,7 +16,7 @@
 
             <div class="col-md-1 col-xs-2">
 
-                <div class="avatar">
+                <div class="avatar pull-left">
                     <?php do_action( 'bbp_theme_before_reply_author_details' ); ?>
                     <?php bbp_reply_author_link( array( 'type' => 'avatar', 'size' => 55 ) ); ?>
                     <?php do_action( 'bbp_theme_after_reply_author_details' ); ?>
@@ -26,7 +26,8 @@
             <div class="col-md-11 col-xs-10">
 
                 <div class="row">
-                    <div class="col-md-12">
+
+                    <div class="col-md-12 col-xs-12">
 
                         <div class="ime pull-left">
                             <?php bbp_reply_author_link( array( 'type' => 'name' ) ); ?>
@@ -51,14 +52,17 @@
                                 </ul>
                             </div>
                         </div>
+                        <?php endif; ?>
                     </div>
-                </div>
-                <?php endif; ?>
 
+
+                <div class="col-md-12 col-xs-12">
                 <div class="poruka">
                         <?php do_action( 'bbp_theme_before_reply_content' ); ?>
                         <?php bbp_reply_content(); ?>
                         <?php do_action( 'bbp_theme_after_reply_content' ); ?>
+                </div>
+                </div>
                 </div>
 
             </div>

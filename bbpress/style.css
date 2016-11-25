@@ -654,7 +654,6 @@ hr {
 }
 
 .odgovori .poruka {
-    margin-top: 5px;
     font-size: 14px;
     color: #555;
     word-break: break-all;
@@ -687,16 +686,14 @@ hr {
 }
 
 /* Avatar */
-
 .odgovori .avatar img {
     border-radius: 50%;
-    margin-right: 10px;
 }
 
 /* Ime */
 
 .odgovori .ime {
-    margin-top: 8px;
+    margin-top: 5px;
     font-size: 16px;
     font-weight: 600;
 }
@@ -708,8 +705,8 @@ hr {
     margin-left: 5px;
 }
 
-a.bbp-reply-to-link {
-    color: #8C8C8C;
+.odgovori .funkcije {
+    margin-top: -2px;
 }
 
 /* Naslov */
