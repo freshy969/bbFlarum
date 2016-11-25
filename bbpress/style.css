@@ -720,6 +720,13 @@ a.bbp-reply-to-link {
     margin-bottom: 0;
     padding: 0;
 }
+.naslov a {
+    color:#fff;
+}
+
+.naslov .fa {
+    margin-right: 5px;
+}
 
 
 .naslov .kategorija {
