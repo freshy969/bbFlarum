@@ -5,3 +5,5 @@
 4. Create Category and select color.
 
 # Screenshot
+
+<img src="http://image.prntscr.com/image/594c64107e9641a6b150558530f3be6e.png">
