@@ -7,7 +7,7 @@ body {
     height: 100%;
     font-size: 14px;
     background: #fff;
-    padding-top: 60px;
+    padding-top: 50px;
 }
 a { color: #000 }
 a:hover {
@@ -711,7 +711,7 @@ hr {
 
 /* Naslov */
 .naslov {
-    margin-top: -60px;
+    margin-top: -40px;
     padding-top: 40px;
     padding-bottom: 40px;
     background: #689578;
@@ -984,7 +984,7 @@ a.favorite-toggle {
 /* Oznake */
 .oznake a {
     display: inline-block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size:13px;
     color:#000;
     padding: 6px 12px;
@@ -996,7 +996,7 @@ a.favorite-toggle {
 /* Copyright */
 
 .copyright {
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
