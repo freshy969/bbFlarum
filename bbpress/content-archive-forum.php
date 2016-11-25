@@ -14,7 +14,7 @@
 		<div class="col-md-12">
 			<div class="row">
 				<div class="col-md-2">
-					<a class="btn btn-danger btn-block zapocni-temu" href="<?php echo esc_url( home_url(bbp_get_root_slug())); ?>/#new-post "><?php _e( 'Create New Topic', 'bbpress' ); ?></a>
+					<a class="btn btn-danger btn-block zapocni-temu" href="#new-post "><?php _e( 'Create New Topic', 'bbpress' ); ?></a>
 				</div>
 				<div class="col-md-10">
 					<div class="lista_kategorija">

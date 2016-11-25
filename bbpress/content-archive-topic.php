@@ -15,7 +15,7 @@
 
             <div class="lista_kategorija">
 
-                <a class="btn btn-danger btn-block zapocni-temu" href="<?php echo esc_url( home_url(bbp_get_root_slug())); ?>/#new-post "><?php _e( 'Create New Topic', 'bbpress' ); ?></a>
+                <a class="btn btn-danger btn-block zapocni-temu" href="#new-post "><?php _e( 'Create New Topic', 'bbpress' ); ?></a>
 
                 <ul class="list-unstyled" style="margin-top: 30px;">
                     <li <?php if ( is_archive('forum')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url(bbp_get_root_slug())); ?>"><i class="fa fa-comments-o"></i> <?php _e( 'All Topics', 'bbpress' ); ?></a></li>
@@ -57,10 +57,9 @@
                     </ul>
                 </span>
 
+                    <?php if (is_user_logged_in()) : ?>
                <a class="btn btn-danger zapocni-temu  hidden-md hidden-lg" href="<?php echo esc_url( home_url(bbp_get_root_slug())); ?>/#new-post "><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
-
-
-
+                    <?php endif; ?>
                     <span class="btn-group" role="group">
                     <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><?php _e( 'View', 'bbpress' ); ?> <span class="caret"></span></button>
                     <ul class="dropdown-menu">

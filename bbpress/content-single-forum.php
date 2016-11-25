@@ -24,7 +24,7 @@
 		<div class="col-md-2 hidden-xs hidden-sm">
 			<div class="lista_kategorija">
 
-				<a class="btn btn-warning btn-block zapocni-temu" style="background:<?php echo get_field('color', bbp_get_topic_forum_id()) ?>; border-color:<?php echo get_field('color', bbp_get_topic_forum_id()) ?>;" href="<?php echo esc_url( bbp_get_forum_permalink()); ?>#new-post"><?php _e( 'Create New Topic', 'bbpress' ); ?></a>
+				<a class="btn btn-warning btn-block zapocni-temu" style="background:<?php echo get_field('color', bbp_get_topic_forum_id()) ?>; border-color:<?php echo get_field('color', bbp_get_topic_forum_id()) ?>;" href="#new-post"><?php _e( 'Create New Topic', 'bbpress' ); ?></a>
 
 				<ul class="list-unstyled" style="margin-top: 30px;">
 					<li <?php if ( is_archive('forum')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url(bbp_get_root_slug())); ?>"><i class="fa fa-comments-o"></i> <?php _e( 'All Topics', 'bbpress' ); ?></a></li>
@@ -65,8 +65,9 @@
                     </ul>
                 </span>
 
+                    <?php if (is_user_logged_in()) : ?>
 					<a class="btn btn-warning zapocni-temu  hidden-md hidden-lg" style="background:<?php echo get_field('color', bbp_get_topic_forum_id()) ?>; border-color:<?php echo get_field('color', bbp_get_topic_forum_id()) ?>;" href="<?php echo esc_url( bbp_get_forum_permalink()); ?>#new-post"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
-
+                    <?php endif; ?>
 
 					<span class="btn-group" role="group">
                     <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><?php _e( 'View', 'bbpress' ); ?> <span class="caret"></span></button>
