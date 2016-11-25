@@ -21,7 +21,9 @@
 <!--				--><?php // printf( __( '%s', 'bbpress' ), bbp_get_user_display_role() ); ?>
 <!--			</bottom>-->
 			<h1><?php bbp_displayed_user_field( 'display_name' ); ?></h1>
+            <?php if ( bbp_get_displayed_user_field( 'description' ) ) : ?>
 			<p><?php bbp_displayed_user_field( 'description' ); ?></p>
+            <?php endif; ?>
             <p>
                 <a href="mailto:<?php bbp_displayed_user_field( 'user_email' ); ?>" title="<?php _e( 'Email', 'bbpress' ); ?>" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-lg fa-envelope-o" aria-hidden="true"></i></a>
                 <a href="<?php bbp_displayed_user_field( 'user_url' ); ?>" title="<?php _e( 'Website', 'bbpress' ); ?>" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-lg fa-globe" aria-hidden="true"></i></a>

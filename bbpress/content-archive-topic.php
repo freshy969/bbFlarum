@@ -23,6 +23,7 @@
 
 
                 <ul class="list-unstyled">
+
                     <?php query_posts(array(
                         'post_type' => bbp_get_forum_post_type(),
                         'orderby' => 'menu_order',
