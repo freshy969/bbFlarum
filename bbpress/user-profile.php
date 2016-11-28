@@ -15,7 +15,7 @@
 	<h3 class="text-uppercase"><?php _e( 'Profile', 'bbpress' ); ?></h3><hr>
 </div>
 
-			<p class="bbp-user-forum-role"><?php  printf( __( 'Forum Role: %s',      'bbpress' ), bbp_get_user_display_role()    ); ?></p>
+<!--			<p class="bbp-user-forum-role">--><?php // printf( __( 'Forum Role: %s',      'bbpress' ), bbp_get_user_display_role()    ); ?><!--</p>-->
 			<p class="bbp-user-topic-count"><?php printf( __( 'Topics Started: %s',  'bbpress' ), bbp_get_user_topic_count_raw() ); ?></p>
 			<p class="bbp-user-reply-count"><?php printf( __( 'Replies Created: %s', 'bbpress' ), bbp_get_user_reply_count_raw() ); ?></p>
 

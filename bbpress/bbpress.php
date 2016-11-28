@@ -20,7 +20,7 @@
     <link href="<?php echo get_template_directory_uri(); ?>/bbpress/img/favicon.png" rel="icon" type="image/x-icon">
 </head>
 <?php flush(); ?>
-<body <?php body_class();?>>
+<body>
 
 <nav class="navbar navbar-default  navbar-fixed-top">
 <div class="container">
@@ -42,8 +42,8 @@
     <?php else : ?>
 
 <div class="btn-group navbar-btn navbar-toggle">
-<a class="btn btn-default" href="<?php echo wp_login_url(); ?>"><?php _e( 'Log In', 'bbpress' ); ?></a>
-<a class="btn btn-danger" href="<?php echo wp_registration_url(); ?>"><?php _e( 'Register', 'bbpress' ); ?></a>
+<a class="btn btn-default" data-toggle="modal" data-target="#prijava"><?php _e( 'Log In', 'bbpress' ); ?></a>
+<a class="btn btn-danger" data-toggle="modal" data-target="#registracija"><?php _e( 'Register', 'bbpress' ); ?></a>
 </div>
     <?php endif; ?>
 
@@ -77,8 +77,8 @@
 </ul>
 <?php else : ?>
 <div class="btn-group navbar-btn pull-right hidden-xs hidden-sm">
-<a class="btn btn-default" href="<?php echo wp_login_url(); ?>"><?php _e( 'Log In', 'bbpress' ); ?></a>
-<a class="btn btn-danger" href="<?php echo wp_registration_url(); ?>"><?php _e( 'Register', 'bbpress' ); ?></a>
+    <a class="btn btn-default" data-toggle="modal" data-target="#prijava"><?php _e( 'Log In', 'bbpress' ); ?></a>
+    <a class="btn btn-danger" data-toggle="modal" data-target="#registracija"><?php _e( 'Register', 'bbpress' ); ?></a>
 </div>
 <?php endif; ?>
 
@@ -92,9 +92,71 @@
 
 <footer>
 <div class="container">
-<div class="copyright text-right"><hr><a href="http://www.sceko.com/" target="_blank" title="Created by Sceko">Created by Sceko</a></div>
+<div class="copyright text-right"><hr><a href="http://www.github.com/Sceko/White" target="_blank" title="Powered by bbPress">Powered by bbPress</a></div>
 </div>
 </footer>
+
+
+<?php if (is_user_logged_in()) : ?>
+<?php else : ?>
+    <div class="modal fade" id="prijava" tabindex="-1" role="dialog" aria-labelledby="prijava" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title text-center" id="prijava">Prijavi se</h4>
+                </div>
+                <div class="modal-body">
+                    <form name="login-form" role="form" action="<?php echo site_url( 'wp-login.php', 'login_post' ) ?>" method="post">
+                        <div class="form-group">
+                            <input type="text" name="log" class="form-control" placeholder="Korisničko ime">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="pwd" class="form-control" placeholder="Lozinka">
+                        </div>
+                        <p>
+                            <a href="<?php echo wp_lostpassword_url(); ?>" title="Zaboravili ste lozinku?">Zaboravili ste lozinku?</a>
+                        </p>
+                        <div class="form-group">
+                            <button type="submit" name="wp-submit" class="btn btn-block btn-success">Prijava</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="registracija" tabindex="-1" role="dialog" aria-labelledby="registracija" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="registracija">Registruj se</h4>
+                </div>
+                <div class="modal-body">
+                    <form name="login-form" role="form" action="<?php echo site_url('wp-login.php?action=register', 'login_post') ?>" method="post">
+                        <div class="form-group">
+                            <input type="text" name="user_login" class="form-control" placeholder="Korisničko ime">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="user_email" class="form-control" placeholder="E-pošta">
+                        </div>
+                        <p>
+                        <div class="alert alert-warning">Lozinka će vam biti poslata.</div>
+                        </p>
+                        <button type="submit" name="user-submit" class="btn btn-block btn-success">Završi registraciju</button>
+                        <input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>?register=true" />
+                        <input type="hidden" name="user-cookie" value="1">
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -125,6 +187,9 @@ ias.extension(new IASSpinnerExtension({
             $(".zapocni-temu").click(function() {
                 $("#new-post").fadeToggle();
             });
+            $(".bbp-topic-reply-link").click(function() {
+                $("#new-post").fadeToggle();
+            });
         });
 
     $(document).ready(function() {
@@ -132,6 +197,9 @@ ias.extension(new IASSpinnerExtension({
             $("#new-post").fadeOut();
         });
     });
+
+    $(".poruka p img").addClass("img-responsive")
+
 
 </script>
 

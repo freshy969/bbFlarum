@@ -21,20 +21,19 @@
                     <li <?php if ( is_archive('forum')) { echo ' class="active"'; } ?>><a href="<?php echo esc_url(home_url(bbp_get_root_slug())); ?>"><i class="fa fa-comments-o"></i> <?php _e( 'All Topics', 'bbpress' ); ?></a></li>
                 </ul>
 
-
                 <ul class="list-unstyled">
-
                     <?php query_posts(array(
                         'post_type' => bbp_get_forum_post_type(),
                         'orderby' => 'menu_order',
                         'order' => 'asc',
                     ));
                     if (have_posts()) : while (have_posts()) : the_post(); ?>
-                        <li><span class="kategorija" style="background: <?php echo get_field("color"); ?>"> </span><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
+                        <li><span class="kategorija" style="background: <?php echo get_field("color"); ?>"></span><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a> <span class="pull-right badge"> <?php echo bbp_get_forum_topic_count(get_the_ID()) ?></span></li>
                     <?php endwhile; ?>
                     <?php endif; ?>
                     <?php wp_reset_query(); ?>
                 </ul>
+
             </div>
         </div>
 

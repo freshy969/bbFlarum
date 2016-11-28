@@ -29,7 +29,7 @@
 							'order' => 'asc',
 						));
 						if (have_posts()) : while (have_posts()) : the_post(); ?>
-							<li><span class="kategorija" style="background: <?php echo get_field("color"); ?>"> </span><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
+							<li><span class="kategorija" style="background: <?php echo get_field("color"); ?>"> </span><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a> <span class="pull-right badge"> <?php echo bbp_get_forum_topic_count(get_the_ID()) ?></span></li>
 						<?php endwhile; ?>
 						<?php endif; ?>
 						<?php wp_reset_query(); ?>

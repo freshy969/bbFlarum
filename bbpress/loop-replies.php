@@ -12,7 +12,7 @@
 <?php do_action( 'bbp_template_before_replies_loop' ); ?>
 
 <div id="content">
-<ul id="topic-<?php bbp_topic_id(); ?>-replies" class="list-unstyled">
+<ul id="topic-<?php bbp_topic_id(); ?>-replies" class="load list-unstyled">
 	<li>
 		<?php if ( bbp_thread_replies() ) : ?>
 			<?php bbp_list_replies(); ?>

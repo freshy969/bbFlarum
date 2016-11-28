@@ -11,7 +11,6 @@
 
 <div id="bbpress-forums">
 
-	<?php bbp_breadcrumb(); ?>
 
 	<?php bbp_topic_tag_description(); ?>
 

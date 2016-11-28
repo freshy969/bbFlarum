@@ -17,17 +17,17 @@
 				<?php echo get_avatar( bbp_get_displayed_user_field( 'user_email', 'raw' ), apply_filters( 'bbp_single_user_details_avatar_size', 100 ) ); ?>
 			</a>
 			</div>
-<!--			<bottom class="btn btn-default pull-right" style="margin-top:10px;">-->
-<!--				--><?php // printf( __( '%s', 'bbpress' ), bbp_get_user_display_role() ); ?>
-<!--			</bottom>-->
-			<h1><?php bbp_displayed_user_field( 'display_name' ); ?></h1>
+
+
+            <h1><?php bbp_displayed_user_field( 'display_name' ); ?></h1>
+
             <?php if ( bbp_get_displayed_user_field( 'description' ) ) : ?>
 			<p><?php bbp_displayed_user_field( 'description' ); ?></p>
             <?php endif; ?>
             <p>
                 <a href="mailto:<?php bbp_displayed_user_field( 'user_email' ); ?>" title="<?php _e( 'Email', 'bbpress' ); ?>" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-lg fa-envelope-o" aria-hidden="true"></i></a>
                 <a target="_blank" href="<?php bbp_displayed_user_field( 'user_url' ); ?>" title="<?php _e( 'Website', 'bbpress' ); ?>" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-lg fa-globe" aria-hidden="true"></i></a>
-
+                <button class="btn btn-sm btn-success role"><?php echo bbp_get_user_display_role(); ?></button>
             </p>
 		</div>
 		</div>

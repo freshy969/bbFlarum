@@ -44,8 +44,7 @@ add_action("login_head", "login_logo");
 // Ediotor
 function bbp_enable_visual_editor( $args = array() ) {
     $args['tinymce'] = true;
-    $args['quicktags'] = false;
-
+    $args['quicktags'] = true;
     return $args;
 }
 add_filter( 'bbp_after_get_the_content_parse_args', 'bbp_enable_visual_editor' );
@@ -62,21 +61,21 @@ add_action( 'bbp_theme_after_topic_title', 'new_topic' );
 // Zatvoren topic
 function zakljucana_tema() {
     if ( bbp_is_topic_closed() && !bbp_is_topic_sticky() )
-        echo '<span class="status"><i data-toggle="tooltip" data-placement="top" title="'. translate( 'Locked', bbpress ) .'" class="fa fa-lock"></i></span>';
+        echo '<span class="status"><i data-toggle="tooltip" data-placement="top" title="'.  _x( 'Closed', 'post', bbpress ) .'" class="fa fa-lock"></i></span>';
 }
 add_action( 'bbp_theme_before_topic_title', 'zakljucana_tema' );
 
 // Izdvojen topic
 function izdvojena_tema() {
     if ( bbp_is_topic_sticky() && !bbp_is_topic_closed() )
-        echo '<span class="status"><i data-toggle="tooltip" data-placement="top" title="'. translate( 'Sticky', bbpress ) .'" class="fa fa-thumb-tack"></i></span>';
+        echo '<span class="status"><i data-toggle="tooltip" data-placement="top" title="'. _x('Sticky', 'Make topic sticky', bbpress) .'" class="fa fa-thumb-tack"></i></span>';
 }
 add_action( 'bbp_theme_before_topic_title', 'izdvojena_tema' );
 
 // Izdvojena i zakljucana
 function izdvojena_zakljucana() {
     if ( bbp_is_topic_sticky() && bbp_is_topic_closed() )
-        echo '<span class="status"><i data-toggle="tooltip" data-placement="top" title="'. translate( 'Announcement', bbpress ) .'" class="fa fa-bullhorn"></i></span>';
+        echo '<span class="status"><i data-toggle="tooltip" data-placement="top" title="'. _x( 'Super Sticky', 'Make topic super sticky', bbpress ) .'" class="fa fa-bullhorn"></i></span>';
 }
 add_action( 'bbp_theme_before_topic_title', 'izdvojena_zakljucana' );
 
@@ -105,5 +104,12 @@ function auto_login($user_id) {
     exit;
 }
 add_action( 'user_register', 'auto_login' );
+
+// Dodaj upload
+function bavotasan_bbpress_upload_media( $args ) {
+    $args['media_buttons'] = true;
+    return $args;
+}
+add_filter( 'bbp_after_get_the_content_parse_args', 'bavotasan_bbpress_upload_media' );
 
 ?>
