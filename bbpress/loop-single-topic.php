@@ -8,7 +8,7 @@
  */
 
 ?>
-<ul id="bbp-topic-<?php bbp_topic_id(); ?>"  class="list-unstyled ">
+<ul id="bbp-topic-<?php bbp_topic_id(); ?>"  class="list-unstyled">
     <li>
         <div class="teme">
             <div class="row">

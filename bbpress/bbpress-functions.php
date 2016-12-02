@@ -53,10 +53,9 @@ add_filter( 'bbp_after_get_the_content_parse_args', 'bbp_enable_visual_editor' )
 function new_topic() {
     $offset = 60*60*1;
     if ( get_post_time() > date('U') - $offset )
-        echo '<span class="novo text-uppercase">'. translate( 'New Topic', bbpress ) .'</span>';
+        echo '<span class="novo">'. translate( 'New Topic', bbpress ) .'</span>';
 }
 add_action( 'bbp_theme_after_topic_title', 'new_topic' );
-
 
 // Zatvoren topic
 function zakljucana_tema() {
@@ -95,7 +94,7 @@ function sakrij_crticu($args = array() ) {
 }
 add_filter ('bbp_before_get_forum_subscribe_link_parse_args', 'sakrij_crticu') ;
 
-// Automacki login
+// Automacki login posle registracije
 function auto_login($user_id) {
     wp_set_current_user($user_id);
     wp_set_auth_cookie($user_id);
@@ -111,5 +110,18 @@ function bavotasan_bbpress_upload_media( $args ) {
     return $args;
 }
 add_filter( 'bbp_after_get_the_content_parse_args', 'bavotasan_bbpress_upload_media' );
+
+
+// Zabrana imena u registraciji
+add_filter('registration_errors', 'limit_username_alphanumerics', 10, 3);
+function limit_username_alphanumerics ($errors, $name) {
+    if ( !preg_match('/^[A-Za-z0-9]{3,16}$/', $name) ){
+        $errors->add( 'user_name', __( '<strong>ERROR</strong>: Invalid username.' ) );
+    }
+    return $errors;
+}
+
+// Micanje verzije iz wp_head
+remove_action('wp_head','wp_generator');
 
 ?>

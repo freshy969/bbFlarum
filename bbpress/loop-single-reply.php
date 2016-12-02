@@ -20,6 +20,9 @@
                     <?php do_action( 'bbp_theme_before_reply_author_details' ); ?>
                     <?php bbp_reply_author_link( array( 'type' => 'avatar', 'size' => 50 ) ); ?>
                     <?php do_action( 'bbp_theme_after_reply_author_details' ); ?>
+                    <?php if (is_super_admin(bbp_get_reply_author_id())): ?>
+                    <span class="status"><i class="fa fa-wrench" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="<?php echo _x( 'Keymaster', 'User role', 'bbpress' ); ?>"></i></span>
+                    <?php endif; ?>
                 </div>
 
                 <?php if ( is_user_logged_in() ) : ?>
@@ -53,6 +56,9 @@
                     <?php do_action( 'bbp_theme_before_reply_content' ); ?>
                     <?php bbp_reply_content(); ?>
                     <?php do_action( 'bbp_theme_after_reply_content' ); ?>
+                    <?php if ( bbp_is_topic(bbp_get_reply_id()) ) : ?>
+                    <div class="fb-like pull-right" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+                    <?php endif; ?>
                 </div>
             </div>
 

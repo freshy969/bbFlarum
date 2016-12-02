@@ -229,11 +229,11 @@
 
 <?php else : ?>
 
-<!--	<div id="no-topic---><?php //bbp_topic_id(); ?><!--" class="bbp-no-topic">-->
-<!--		<div class="alert alert-warning">-->
-<!--			<p>--><?php //is_user_logged_in() ? _e( 'You cannot create new topics.', 'bbpress' ) : _e( 'You must be logged in to create new topics.', 'bbpress' ); ?><!--</p>-->
-<!--		</div>-->
-<!--	</div>-->
+	<div id="no-topic-<?php bbp_topic_id(); ?>" class="bbp-no-topic">
+		<div class="alert alert-warning">
+			<p><?php is_user_logged_in() ? _e( 'You cannot create new topics.', 'bbpress' ) : _e( 'You must be logged in to create new topics.', 'bbpress' ); ?></p>
+		</div>
+	</div>
 
 <?php endif; ?>
 

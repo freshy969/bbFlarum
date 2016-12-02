@@ -456,11 +456,6 @@ hr {
     margin-right: 15px;
 }
 
-.tema_status i {
-    margin-right: 5px;
-
-}
-
 /* Status */
 .teme .status .fa-bullhorn {
     position: absolute;
@@ -503,9 +498,10 @@ hr {
     font-size:11px;
     font-weight: 600;
     color: #fff;
-    background: #D63030;
+    background: #000;
     margin-right: 5px;
     margin-left: 5px;
+    display: inline-block;
 }
 
 /* Naslov */
@@ -619,7 +615,9 @@ hr {
     padding: 0px;
     border-bottom:none;
 }
-
+.tema_status i {
+    margin-right: 5px;
+}
 .tema_status .fa-bullhorn {
     color: #fff;
     background: #48BF83;
@@ -652,6 +650,29 @@ hr {
     border-bottom:1px solid #EDEDED;
     margin-bottom: 20px;
 }
+.odgovori .status .fa-wrench {
+    position: absolute;
+    top:-1px;
+    left:44px;
+    color: #fff;
+    background: #D63030;
+    border-radius: 50%;
+    padding: 3px 5px;
+    border:2px solid #fff;
+    font-size:14px;
+}
+.odgovori .online {
+    position: absolute;
+    top:-1px;
+    left:48px;
+    color: #fff;
+    background: #4B93D1;
+    border-radius: 50%;
+    padding: 3px 4px;
+    border:2px solid #fff;
+    font-size:14px;
+}
+
 .odgovori .poruka {
     margin-left: 65px;
     margin-top: 7px;
@@ -660,6 +681,12 @@ hr {
     word-wrap: break-word;
     height:auto;
     overflow:hide;
+}
+.odgovori .poruka pre {
+    color: #000;
+    background-color: #EDEDED;
+    border: 1px solid #EDEDED;
+    padding: 10px;
 }
 .odgovori .poruka img {
     max-width: 100%;
@@ -673,6 +700,13 @@ hr {
 
 .odgovori .poruka blockquote {
     border-left: 5px solid #8C8C92;
+}
+
+.img-thumbnail {
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #EDEDED;
+    border-radius: 4px;
 }
 /* Izmene */
 
@@ -809,24 +843,31 @@ a.favorite-toggle {
 }
 
 .lista_kategorija ul {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 
 .lista_kategorija li {
-    margin-bottom: 10px;
+    padding: 5px 0px;
 }
 .lista_kategorija li a {
-    margin-bottom: 10px;
     color:#8C8C8C;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
 }
+
+.lista_kategorija li a:hover {
+    margin-left: 10px;
+}
+
 .lista_kategorija li.active a {
     font-weight: 600;
     color:#000;
 }
 .lista_kategorija .kategorija {
     font-size:9px;
-    margin-right: 10px;
+    margin-right: 5px;
     display: inline-block;
     height: 16px;
     width: 16px;

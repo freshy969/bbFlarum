@@ -11,8 +11,8 @@
 
 <?php do_action( 'bbp_template_before_pagination_loop' ); ?>
 
-<ul class="pagination">
+<div class="pagination">
 	<?php bbp_topic_pagination_links(); ?>
-</ul>
+</div>
 
 <?php do_action( 'bbp_template_after_pagination_loop' ); ?>
