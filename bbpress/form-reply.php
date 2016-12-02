@@ -102,11 +102,11 @@
 
 							<?php if ( bbp_is_reply_edit() && ( bbp_get_reply_author_id() !== bbp_get_current_user_id() ) ) : ?>
 
-								<label for="bbp_topic_subscription"><?php _e( 'Notify the author of follow-up replies via email', 'bbpress' ); ?></label>
+								<?php _e( 'Notify the author of follow-up replies via email', 'bbpress' ); ?>
 
 							<?php else : ?>
 
-								<label for="bbp_topic_subscription"><?php _e( 'Notify me of follow-up replies via email', 'bbpress' ); ?></label>
+								<?php _e( 'Notify me of follow-up replies via email', 'bbpress' ); ?>
 
 							<?php endif; ?>
 
@@ -122,12 +122,12 @@
 
 							<div class="form-group">
 								<input name="bbp_log_reply_edit" id="bbp_log_reply_edit" type="checkbox" value="1" <?php bbp_form_reply_log_edit(); ?> tabindex="<?php bbp_tab_index(); ?>" />
-								<label for="bbp_log_reply_edit"><?php _e( 'Keep a log of this edit:', 'bbpress' ); ?></label>
+								<?php _e( 'Keep a log of this edit:', 'bbpress' ); ?>
 								<hr>
 
 							</div>
 							<div class="form-group">
-								<label for="bbp_reply_edit_reason"><?php printf( __( 'Optional reason for editing:', 'bbpress' ), bbp_get_current_user_name() ); ?></label><br />
+								<?php printf( __( 'Optional reason for editing:', 'bbpress' ), bbp_get_current_user_name() ); ?><br />
 								<input type="text" value="<?php bbp_form_reply_edit_reason(); ?>" tabindex="<?php bbp_tab_index(); ?>" size="40" name="bbp_reply_edit_reason" id="bbp_reply_edit_reason" class="form-control" />
 							</div>
 

@@ -6,11 +6,9 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <title><?php if(is_archive('forum') || is_archive('forums')) : ?><?php bloginfo('name'); ?> - <?php bloginfo('description'); ?><?php else : ?><?php the_title();?> - <?php bloginfo('name'); ?><?php endif; ?></title>
     <meta name="revisit-after" content="1 days">
-    <meta name="referrer" content="always">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bbpress/css/bbpress.css" type="text/css" media="screen">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bbpress/style.css" type="text/css" media="screen">
     <link href="<?php echo get_template_directory_uri(); ?>/bbpress/img/favicon.png" rel="icon" type="image/x-icon">
 </head>
