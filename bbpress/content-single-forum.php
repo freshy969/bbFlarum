@@ -14,7 +14,7 @@
     <div class="container">
         <h1><?php echo bbp_get_topic_title(); ?></h1>
         <p><?php bbp_forum_content(); ?></p>
-       <p>
+
         <div class="pod_kategorije">
             <ul class="list-inline">
         <?php bbp_list_forums(array (
@@ -32,7 +32,7 @@
             <li class="prijava"><?php bbp_forum_subscription_link( array( 'before' => '', 'subscribe' => ''. translate('Subscribe', bbpress) .'', 'unsubscribe' => ''. translate('Unsubscribe', bbpress) .' ' ) ); ?></li>
             </ul>
         </div>
-        </p>
+
     </div>
 </div>
 

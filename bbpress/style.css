@@ -970,7 +970,9 @@ hr {
     padding: 3px 8px;
     border-radius: 4px;
 }
-
+.naslov .pod_kategorije {
+    margin-top: 5px;
+}
 .naslov .pod_kategorije ul li a {
     color: #fff;
 }
