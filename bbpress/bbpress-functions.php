@@ -124,4 +124,25 @@ function limit_username_alphanumerics ($errors, $name) {
 // Micanje verzije iz wp_head
 remove_action('wp_head','wp_generator');
 
+// Rss feed osim za forum
+remove_action('wp_head', 'feed_links', 2);
+
+// Za izdvojene teme opis
+function wpdocs_excerpt_more( $more ) {
+    return '...';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 40;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+// Micanje verzije
+function wcs_remove_script_styles_version( $src ){
+    return remove_query_arg( 'ver', $src );
+}
+add_filter( 'script_loader_src', 'wcs_remove_script_styles_version' );
+add_filter( 'style_loader_src', 'wcs_remove_script_styles_version' );
+
 ?>

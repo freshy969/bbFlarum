@@ -22,7 +22,7 @@
                 </ul>
 
                 <ul class="list-unstyled">
-                    <?php query_posts(array('post_type' => bbp_get_forum_post_type(), 'orderby' => 'menu_order', 'order' => 'asc', 'posts_per_page' => '99'));
+                    <?php query_posts(array('post_type' => bbp_get_forum_post_type(), 'orderby' => 'menu_order', 'order' => 'asc', 'posts_per_page' => '99', 'post_parent' => 0));
                     if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <li><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><span class="kategorija" style="background: <?php echo get_field("color"); ?>"></span> <?php the_title(); ?></a><span class="pull-right badge"> <?php echo bbp_get_forum_topic_count(get_the_ID()) ?></span></li>
                     <?php endwhile; ?>
@@ -43,7 +43,7 @@
                 <div class="btn-group hidden-md hidden-lg" role="group">
                     <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><i data-toggle="tooltip" data-placement="top" title="<?php echo __('Categories list') ?>"  class="fa fa-th-large" aria-hidden="true"></i></button>
                     <ul class="dropdown-menu">
-                        <?php query_posts(array('post_type' => bbp_get_forum_post_type(), 'orderby' => 'menu_order', 'order' => 'asc', 'posts_per_page' => '99'));
+                        <?php query_posts(array('post_type' => bbp_get_forum_post_type(), 'orderby' => 'menu_order', 'order' => 'asc', 'posts_per_page' => '99', 'post_parent' => 0));
                     if (have_posts()) : while (have_posts()) : the_post(); ?>
                         <li><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><span class="kategorija" style="background: <?php echo get_field("color"); ?>"></span> <?php the_title(); ?></a></li>
                     <?php endwhile; ?>

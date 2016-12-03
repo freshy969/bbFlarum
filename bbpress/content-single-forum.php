@@ -14,10 +14,25 @@
     <div class="container">
         <h1><?php echo bbp_get_topic_title(); ?></h1>
         <p><?php bbp_forum_content(); ?></p>
-        <div class="prijava text-uppercase"><?php bbp_forum_subscription_link( array( 'before' => '', 'subscribe' => ''. translate('Subscribe', bbpress) .'', 'unsubscribe' => ''. translate('Unsubscribe', bbpress) .' ' ) ); ?></div>
-        <span class="pod_kategorije">
-        <?php bbp_list_forums(); ?>
-        </span>
+       <p>
+        <div class="pod_kategorije">
+            <ul class="list-inline">
+        <?php bbp_list_forums(array (
+            'before'              => '',
+            'after'               => '',
+            'link_before'         => '<li>',
+            'link_after'          => '</li>',
+            'count_before'        => ' <span class="badge">',
+            'count_after'         => '</span> ',
+            'count_sep'           => '',
+            'separator'           => '',
+            'show_topic_count'    => true,
+            'show_reply_count'    => false,
+        )); ?>
+            <li class="prijava"><?php bbp_forum_subscription_link( array( 'before' => '', 'subscribe' => ''. translate('Subscribe', bbpress) .'', 'unsubscribe' => ''. translate('Unsubscribe', bbpress) .' ' ) ); ?></li>
+            </ul>
+        </div>
+        </p>
     </div>
 </div>
 
@@ -35,8 +50,9 @@
                 </ul>
 
                 <ul class="list-unstyled">
+
                     <?php $this_post = $post->ID; ?>
-                    <?php query_posts(array('post_type' => bbp_get_forum_post_type(), 'orderby' => 'menu_order', 'order' => 'asc', 'posts_per_page' => '99'));
+                    <?php query_posts(array('post_type' => bbp_get_forum_post_type(), 'orderby' => 'menu_order', 'order' => 'asc', 'posts_per_page' => '99', 'post_parent' => 0));
                     if (have_posts()) : while (have_posts()) : the_post(); ?>
                         <li <?php if( $this_post == $post->ID ) { echo ' class="active"'; } ?>><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><span class="kategorija" style="background: <?php echo get_field("color"); ?>"></span> <?php the_title(); ?></a> <span class="pull-right badge"> <?php echo bbp_get_forum_topic_count(get_the_ID()) ?></span></li>
                     <?php endwhile; ?>
@@ -57,7 +73,7 @@
                     <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><i data-toggle="tooltip" data-placement="top" title="<?php echo __('Categories list') ?>"  class="fa fa-th-large" aria-hidden="true"></i></button>
                     <ul class="dropdown-menu">
                  <?php $this_post = $post->ID; ?>
-                        <?php query_posts(array('post_type' => bbp_get_forum_post_type(), 'orderby' => 'menu_order', 'order' => 'asc', 'posts_per_page' => '99'));
+                        <?php query_posts(array('post_type' => bbp_get_forum_post_type(), 'orderby' => 'menu_order', 'order' => 'asc', 'posts_per_page' => '99', 'post_parent' => 0));
                     if (have_posts()) : while (have_posts()) : the_post(); ?>
                         <li <?php if( $this_post == $post->ID ) { echo ' class="active"'; } ?>><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><span class="kategorija" style="background: <?php echo get_field("color"); ?>"></span> <?php the_title(); ?></a></li>
                     <?php endwhile; ?>

@@ -9,85 +9,121 @@ body {
     background: #fff;
     padding-top: 50px;
 }
-a { color: #000 }
+
+a {
+    color: #000
+}
+
 a:hover {
     color: #8C8C8C;
     text-decoration: none;
 }
+
 hr {
     border-color: #EDEDED;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
+
 /* Avatar Navigacija */
+
 .navbar-gravatar {
     margin-top: -5px;
     margin-bottom: -5px;
 }
+
 .navbar-gravatar img {
     margin-right: 5px;
     border-radius: 50%;
 }
 
+
 /* Bootstrap */
+
 .navbar-brand {
-  float: left;
-  height: 50px;
-  padding: 15px 15px;
-  font-size: 18px;
-  line-height: 20px;
-  background: url("img/logo.png") no-repeat;
-  width: 85px;
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    background: url("img/logo.png") no-repeat;
+    width: 85px;
 }
+
 @media (min-width: 768px) {
     .navbar > .container .navbar-brand,
-    .navbar > .container-fluid .navbar-brand { margin-left: 0px; border-right:1px solid #EDEDED; }
+    .navbar > .container-fluid .navbar-brand {
+        margin-left: 0px;
+        border-right: 1px solid #EDEDED;
+    }
 }
+
 @media (max-width: 768px) {
     .navbar > .container .navbar-brand,
-    .navbar > .container-fluid .navbar-brand { margin-left: 15px }
+    .navbar > .container-fluid .navbar-brand {
+        margin-left: 15px
+    }
 }
+
 .navbar {
     margin-bottom: 0px;
     border: none;
 }
+
 @media (min-width: 768px) {
-    .navbar { border-radius: 0px }
+    .navbar {
+        border-radius: 0px
+    }
 }
+
 .navbar-default {
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: #fff;
-    -webkit-box-shadow: 0 0px 10px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0 0px 10px rgba(0,0,0,0.3);
-    box-shadow: 0 0px 10px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
 }
-.navbar-default .navbar-brand { color: #000 }
+
+.navbar-default .navbar-brand {
+    color: #000
+}
+
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
     color: #8C8C8C;
     background-color: transparent;
 }
-.navbar-default .navbar-text { color: #8C8C8C }
-.navbar-default .navbar-nav > li > a { color: #8C8C8C }
+
+.navbar-default .navbar-text {
+    color: #8C8C8C
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #8C8C8C
+}
+
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
     color: #000;
     background-color: transparent;
 }
+
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
     color: #8C8C8C;
     background-color: transparent;
 }
+
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
 .navbar-default .navbar-nav > .disabled > a:focus {
     color: #ccc;
     background-color: transparent;
 }
+
 .navbar-toggle {
     position: relative;
     float: right;
@@ -100,27 +136,39 @@ hr {
     border: 1px solid transparent;
     border-radius: 4px;
 }
+
 .navbar-default .navbar-toggle {
     border-color: transparent;
     color: #8C8C92;
     border-radius: 4px;
 }
+
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
     background-color: #EDEDED;
     color: #8C8C92;
 }
-.navbar-default .navbar-toggle .icon-bar { background-color: #EDEDED }
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #EDEDED
+}
+
 .navbar-default .navbar-collapse,
-.navbar-default .navbar-form { border-color: #EDEDED }
+.navbar-default .navbar-form {
+    border-color: #EDEDED
+}
+
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
     color: #333;
     background-color: transparent;
 }
+
 @media (max-width: 767px) {
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a { color: #777 }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #777
+    }
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
         color: #333;
@@ -139,11 +187,24 @@ hr {
         background-color: transparent;
     }
 }
-.navbar-default .navbar-link { color: #777 }
-.navbar-default .navbar-link:hover { color: #333 }
-.navbar-default .btn-link { color: #777 }
+
+.navbar-default .navbar-link {
+    color: #777
+}
+
+.navbar-default .navbar-link:hover {
+    color: #333
+}
+
+.navbar-default .btn-link {
+    color: #777
+}
+
 .navbar-default .btn-link:hover,
-.navbar-default .btn-link:focus { color: #333 }
+.navbar-default .btn-link:focus {
+    color: #333
+}
+
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -166,16 +227,19 @@ hr {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+
 .dropdown-menu.pull-right {
     right: 0;
     left: auto;
 }
+
 .dropdown-menu .divider {
     height: 1px;
     margin: 9px 0;
     overflow: hidden;
     background-color: #EDEDED;
 }
+
 .dropdown-menu > li > a {
     display: block;
     padding: 5px 20px;
@@ -185,12 +249,14 @@ hr {
     color: #000;
     white-space: nowrap;
 }
+
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
     color: #000;
     text-decoration: none;
     background-color: #EDEDED;
 }
+
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
@@ -199,10 +265,23 @@ hr {
     background-color: #EDEDED;
     outline: 0;
 }
+
+
 /* Dugmad */
-.btn { font-size: 14px; padding: 8px 14px; }
-.btn-sm { font-size: 13px }
-.btn-lg { font-size: 16px }
+
+.btn {
+    font-size: 14px;
+    padding: 8px 14px;
+}
+
+.btn-sm {
+    font-size: 13px
+}
+
+.btn-lg {
+    font-size: 16px
+}
+
 .btn-success,
 .btn-success:focus,
 .btn-success.focus,
@@ -225,11 +304,13 @@ hr {
     background: #20935A;
     border: 1px solid #20935A;
 }
+
 .btn-success:hover {
     color: #fff;
     background: #4CA87B;
     border: 1px solid #4CA87B;
 }
+
 .btn-primary,
 .btn-primary:focus,
 .btn-primary.focus,
@@ -252,11 +333,13 @@ hr {
     background: #00AEEF;
     border: 1px solid #00AEEF;
 }
+
 .btn-primary:hover {
     color: #fff;
     background: #33BEF2;
     border: 1px solid #33BEF2;
 }
+
 .btn-default,
 .btn-default:focus,
 .btn-default.focus,
@@ -279,11 +362,13 @@ hr {
     background: #EDEDED;
     border: 1px solid #EDEDED;
 }
+
 .btn-default:hover {
     color: #8C8C92;
     background: #E0E0E0;
     border: 1px solid #E0E0E0;
 }
+
 .btn-warning,
 .btn-warning:focus,
 .btn-warning.focus,
@@ -306,6 +391,7 @@ hr {
     background: #FFB10A;
     border: 1px solid #FFB10A;
 }
+
 .btn-warning:hover {
     color: #fff;
     background: #FFC03B;
@@ -313,6 +399,7 @@ hr {
     opacity: 0.9;
     filter: alpha(opacity=90);
 }
+
 .btn-danger,
 .btn-danger:focus,
 .btn-danger.focus,
@@ -335,12 +422,16 @@ hr {
     background: #D63030;
     border: 1px solid #D63030;
 }
+
 .btn-danger:hover {
     color: #fff;
     background: #C52727;
     border: 1px solid #C52727;
 }
+
+
 /* Input */
+
 .form-control {
     display: block;
     width: 100%;
@@ -359,21 +450,30 @@ hr {
     -o-transition: none;
     transition: none;
 }
+
 .form-control:focus {
     border-color: #EDEDED;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+
 .form-control::-moz-placeholder {
     color: #8C8C8C;
     opacity: 1;
     filter: alpha(opacity=100);
 }
-.form-control:-ms-input-placeholder { color: #8C8C8C }
-.form-control::-webkit-input-placeholder { color: #8C8C8C }
+
+.form-control:-ms-input-placeholder {
+    color: #8C8C8C
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #8C8C8C
+}
 
 
 /* Pretraga */
+
 .pretraga .form-control {
     border-radius: 4px;
     background-color: #EDEDED;
@@ -383,51 +483,64 @@ hr {
     font-weight: 300;
     height: 38px;
     width: 270px;
-    -webkit-transition: width 1s; /* Safari */
+    -webkit-transition: width 1s;
+    /* Safari */
     transition: width 1s;
 }
-.pretraga .form-control::-moz-placeholder { color: #8C8C8C }
-.pretraga .form-control:-ms-input-placeholder { color: #8C8C8C }
-.pretraga .form-control::-webkit-input-placeholder { color: #8C8C8C }
+
+.pretraga .form-control::-moz-placeholder {
+    color: #8C8C8C
+}
+
+.pretraga .form-control:-ms-input-placeholder {
+    color: #8C8C8C
+}
+
+.pretraga .form-control::-webkit-input-placeholder {
+    color: #8C8C8C
+}
 
 .pretraga .form-control:focus {
     background-color: #fff;
     border: 2px solid #D63030;
     width: 350px;
-
 }
 
-.fa.form-control-feedback { line-height: 38px }
+.fa.form-control-feedback {
+    line-height: 38px
+}
+
 .has-feedback-left .form-control {
     padding-left: 40px;
 }
+
 .has-feedback-left .form-control-feedback {
     left: 0;
     padding-left: 5px;
     color: #8C8C8C;
-    font-size:14px;
+    font-size: 14px;
 }
+
 .pretraga:hover .form-control-feedback {
     left: 0;
     padding-left: 5px;
     color: #000;
 }
 
-
-
 .izaberi {
     margin-bottom: 20px;
 }
+
 .naslovi h2 {
-    color:#000;
-    font-size:16px;
+    color: #000;
+    font-size: 16px;
     margin: 0;
     padding: 0;
 }
 
 .naslovi h3 {
-    color:#000;
-    font-size:14px;
+    color: #000;
+    font-size: 14px;
     margin: 0;
     padding: 0;
 }
@@ -450,52 +563,57 @@ hr {
     margin-top: 5px;
 }
 
+
 /* Avatar */
+
 .teme .avatar img {
     border-radius: 50%;
     margin-right: 15px;
 }
 
+
 /* Status */
+
 .teme .status .fa-bullhorn {
     position: absolute;
-    top:-1px;
-    left:44px;
+    top: -1px;
+    left: 44px;
     color: #fff;
     background: #48BF83;
     border-radius: 50%;
     padding: 3px 4px;
-    border:2px solid #fff;
-    font-size:14px;
+    border: 2px solid #fff;
+    font-size: 14px;
 }
+
 .teme .status .fa-thumb-tack {
-     position: absolute;
-     top:-1px;
-     left:44px;
-     color: #fff;
-     background: #D63030;
-     border-radius: 50%;
-     padding: 3px 6px;
-     border:2px solid #fff;
-     font-size:14px;
- }
+    position: absolute;
+    top: -1px;
+    left: 44px;
+    color: #fff;
+    background: #D63030;
+    border-radius: 50%;
+    padding: 3px 6px;
+    border: 2px solid #fff;
+    font-size: 14px;
+}
 
 .teme .status .fa-lock {
     position: absolute;
-    top:-1px;
-    left:44px;
+    top: -1px;
+    left: 44px;
     color: #fff;
     background: #888888;
     border-radius: 50%;
     padding: 3px 6px;
-    border:2px solid #fff;
-    font-size:14px;
+    border: 2px solid #fff;
+    font-size: 14px;
 }
 
 .teme .novo {
     border-radius: 4px;
     padding: 2px 6px;
-    font-size:11px;
+    font-size: 11px;
     font-weight: 600;
     color: #fff;
     background: #000;
@@ -504,74 +622,105 @@ hr {
     display: inline-block;
 }
 
+
 /* Naslov */
+
 .teme .naziv a {
-    color:#000;
-    font-size:16px;
+    color: #000;
+    font-size: 16px;
     font-weight: 600;
 }
+
 .teme .naziv a:visited {
-    color:#8C8C8C;
-}
-.teme .ime i {
-    color:#AEAEAE;
-    font-size:13px;
-}
-.teme .ime a {
-    color:#AEAEAE;
-    font-size:13px;
-    margin-right: 5px;
-}
-.teme:hover .ime a,.teme:hover .ime i {
-    color:#8C8C8C;
-}
-.teme .vrijeme a {
-    color:#AEAEAE;
-    font-size:13px;
+    color: #8C8C8C;
 }
 
-/* Kategorija */
-.teme .kategorija a {
-    color:#fff;
+.teme .poruka {
+    margin-left: 65px;
+    margin-top: 7px;
 }
+
+.teme .poruka .excerpt {
+    color: #AEAEAE;
+    font-size: 13px;
+}
+
+.teme .ime i {
+    color: #AEAEAE;
+    font-size: 13px;
+}
+
+.teme .ime a {
+    font-weight: 600;
+    color: #AEAEAE;
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+.teme:hover .ime a,
+.teme:hover .ime i {
+    color: #8C8C8C;
+}
+
+.teme .vrijeme a {
+    color: #AEAEAE;
+    font-size: 13px;
+}
+
+
+/* Kategorija */
+
+.teme .kategorija a {
+    color: #fff;
+}
+
 .teme .kategorija {
     border-radius: 4px;
     padding: 2px 6px;
-    font-size:11px;
+    font-size: 11px;
     margin-right: 10px;
     font-weight: 600;
 }
+
 .teme .kategorija:hover {
     opacity: 0.9;
     filter: alpha(opacity=90);
 }
+
+
 /* Odgovora */
+
 .teme .odgovora {
-    color:#000;
+    color: #000;
     font-size: 14px;
     font-weight: 600;
     margin-right: 10px;
 }
+
 .teme .odgovora i {
     font-size: 14px;
 }
+
 .teme .odgovora p {
-    color:#8C8C8C;
+    color: #8C8C8C;
     font-size: 10px;
     font-weight: 400;
 }
 
+
 /* Omiljeno */
+
 .teme .omiljeno {
     display: none;
 }
+
 .teme:hover .omiljeno {
     display: inline;
 }
 
 .teme .omiljeno .fa-ellipsis-v {
     margin-top: -4px;
-    color:#8C8C8C;
+    color: #8C8C8C;
     font-size: 14px;
     font-weight: 600;
     padding: 8px 14px;
@@ -584,47 +733,54 @@ hr {
 }
 
 .teme .omiljeno a {
-    color:#000;
+    color: #000;
 }
 
+
 /* Paginacija na temama */
+
 .naziv .bbp-topic-pagination a {
     border-radius: 4px;
     padding: 1px 6px;
     font-size: 13px;
     font-weight: 400;
-    color:#8C8C8C;
-    border:1px solid #EDEDED;
+    color: #8C8C8C;
+    border: 1px solid #EDEDED;
     background: #fff;
 }
+
 .naziv .bbp-topic-pagination a:hover {
-    color:#fff;
-    background:#E3472F;
-    border:1px solid #E3472F;
+    color: #fff;
+    background: #E3472F;
+    border: 1px solid #E3472F;
 }
+
 
 /* Odgovori */
 
 .prvi_odgovor:first-child {
-    border:1px solid #EDEDED;
+    border: 1px solid #EDEDED;
     padding: 10px;
     margin-bottom: 20px;
-    border-radius:4px;
+    border-radius: 4px;
 }
+
 .prvi_odgovor:first-child .odgovori {
     padding: 0px;
-    border-bottom:none;
+    border-bottom: none;
 }
+
 .tema_status i {
     margin-right: 5px;
 }
+
 .tema_status .fa-bullhorn {
     color: #fff;
     background: #48BF83;
     border-radius: 50%;
     padding: 3px 4px;
-    border:2px solid #fff;
-    font-size:14px;
+    border: 2px solid #fff;
+    font-size: 14px;
 }
 
 .tema_status .fa-thumb-tack {
@@ -632,8 +788,8 @@ hr {
     background: #D63030;
     border-radius: 50%;
     padding: 3px 6px;
-    border:2px solid #fff;
-    font-size:14px;
+    border: 2px solid #fff;
+    font-size: 14px;
 }
 
 .tema_status .fa-lock {
@@ -641,36 +797,38 @@ hr {
     background: #888888;
     border-radius: 50%;
     padding: 3px 6px;
-    border:2px solid #fff;
-    font-size:14px;
+    border: 2px solid #fff;
+    font-size: 14px;
 }
 
 .odgovori {
     padding-bottom: 20px;
-    border-bottom:1px solid #EDEDED;
+    border-bottom: 1px solid #EDEDED;
     margin-bottom: 20px;
 }
+
 .odgovori .status .fa-wrench {
     position: absolute;
-    top:-1px;
-    left:44px;
+    top: -1px;
+    left: 44px;
     color: #fff;
     background: #D63030;
     border-radius: 50%;
     padding: 3px 5px;
-    border:2px solid #fff;
-    font-size:14px;
+    border: 2px solid #fff;
+    font-size: 14px;
 }
+
 .odgovori .online {
     position: absolute;
-    top:-1px;
-    left:48px;
+    top: -1px;
+    left: 48px;
     color: #fff;
     background: #4B93D1;
     border-radius: 50%;
     padding: 3px 4px;
-    border:2px solid #fff;
-    font-size:14px;
+    border: 2px solid #fff;
+    font-size: 14px;
 }
 
 .odgovori .poruka {
@@ -679,15 +837,17 @@ hr {
     font-size: 16px;
     color: #555;
     word-wrap: break-word;
-    height:auto;
-    overflow:hide;
+    height: auto;
+    overflow: hide;
 }
+
 .odgovori .poruka pre {
     color: #000;
     background-color: #EDEDED;
     border: 1px solid #EDEDED;
     padding: 10px;
 }
+
 .odgovori .poruka img {
     max-width: 100%;
     max-height: 100%;
@@ -708,11 +868,14 @@ hr {
     border: 1px solid #EDEDED;
     border-radius: 4px;
 }
+
+
 /* Izmene */
 
-.bbp-topic-revision-log, .bbp-reply-revision-log {
-    border-top:1px solid #EDEDED;
-    list-style:none;
+.bbp-topic-revision-log,
+.bbp-reply-revision-log {
+    border-top: 1px solid #EDEDED;
+    list-style: none;
     margin: 0;
     padding: 0;
     font-size: 14px;
@@ -721,15 +884,19 @@ hr {
     clear: both;
 }
 
-.bbp-topic-revision-log img, .bbp-reply-revision-log img {
-   border-radius:50%;
+.bbp-topic-revision-log img,
+.bbp-reply-revision-log img {
+    border-radius: 50%;
 }
 
+
 /* Avatar */
+
 .odgovori .avatar img {
     border-radius: 50%;
     margin-right: 15px;
 }
+
 
 /* Ime */
 
@@ -741,7 +908,7 @@ hr {
 
 .odgovori .ime .vreme {
     font-weight: 400;
-    color:#ccc;
+    color: #ccc;
     font-size: 14px;
     margin-left: 5px;
 }
@@ -750,28 +917,34 @@ hr {
     margin-top: -3px;
 }
 
+
 /* Naslov */
+
 .naslov {
     margin-top: -40px;
     padding-top: 40px;
     padding-bottom: 40px;
     background: #689578;
-    color:#fff;
+    color: #fff;
     margin-bottom: 40px;
 }
+
 .naslov h1 {
     margin: 0;
     font-size: 24px;
     margin-top: 5px;
 }
+
 .naslov p {
     margin-top: 10px;
     margin-bottom: 0;
     padding: 0;
 }
+
 .naslov a {
-    color:#fff;
+    color: #fff;
 }
+
 .naslov a:hover {
     text-decoration: underline;
 }
@@ -779,26 +952,39 @@ hr {
 .naslov .fa {
     margin-right: 5px;
 }
+
 .naslov .role {
     padding: 1px 6px;
     background: #72a484;
-    border-color:#72a484;
+    border-color: #72a484;
 }
+
 .naslov .role:hover {
     background: #70A181;
-    border-color:#70A181;
+    border-color: #70A181;
 }
+
 .naslov .kategorija {
     font-size: 13px;
     background: #fff;
     padding: 3px 8px;
     border-radius: 4px;
 }
-.naslov .prijava {
-    font-size: 13px;
-    margin-top: 5px;
+
+.naslov .pod_kategorije ul li a {
+    color: #fff;
 }
-.naslov .prijava a {
+
+.naslov .pod_kategorije .badge {
+    background: #fff;
+    border: 1px solid #EDEDED;
+    color: #000;
+    margin-left: 5px;
+    font-size: 11px;
+    margin-top: -1px;
+}
+
+.naslov li.prijava span a {
     font-size: 13px;
     text-decoration: none;
     color: #000;
@@ -806,43 +992,42 @@ hr {
     border-radius: 4px;
     padding: 3px 8px;
 }
-.naslov .pod_kategorije a {
-    color: #fff;
-    opacity: 0.7;
-    filter: alpha(opacity=70);
-}
 
 .naslov .avatar img {
     margin-right: 25px;
-    border-radius:50%;
+    border-radius: 50%;
     padding: 5px;
     background: #fff;
-    -webkit-box-shadow: 0px 0px 6px 0px rgba(68,68,68,1);
-    -moz-box-shadow: 0px 0px 6px 0px rgba(68,68,68,1);
-    box-shadow: 0px 0px 6px 0px rgba(68,68,68,1);
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(68, 68, 68, 1);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(68, 68, 68, 1);
+    box-shadow: 0px 0px 6px 0px rgba(68, 68, 68, 1);
 }
+
 
 /* Prijave */
 
 a.subscription-toggle {
-    color:#8C8C92;
+    color: #8C8C92;
 }
 
+
 /* Omiljene */
+
 a.favorite-toggle {
-    color:#8C8C92;
+    color: #8C8C92;
 }
 
 
 /* Lista kategorija */
+
 .lista_kategorija i {
-    font-size:16px;
+    font-size: 16px;
     margin-right: 5px;
 }
 
 .lista_kategorija h3 {
-    color:#000;
-    font-size:14px;
+    color: #000;
+    font-size: 14px;
     margin: 0;
     padding: 0;
 }
@@ -851,12 +1036,12 @@ a.favorite-toggle {
     margin-bottom: 20px;
 }
 
-
 .lista_kategorija li {
     padding: 5px 0px;
 }
+
 .lista_kategorija li a {
-    color:#8C8C8C;
+    color: #8C8C8C;
     -webkit-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -868,10 +1053,11 @@ a.favorite-toggle {
 
 .lista_kategorija li.active a {
     font-weight: 600;
-    color:#000;
+    color: #000;
 }
+
 .lista_kategorija .kategorija {
-    font-size:9px;
+    font-size: 9px;
     margin-right: 5px;
     display: inline-block;
     height: 16px;
@@ -882,13 +1068,13 @@ a.favorite-toggle {
 
 .lista_kategorija .badge {
     background: #fff;
-    border:1px solid #EDEDED;
-    color:#8C8C8C;
-    font-size:11px;
+    border: 1px solid #EDEDED;
+    color: #8C8C8C;
+    font-size: 11px;
 }
 
 .izaberi .kategorija {
-    font-size:9px;
+    font-size: 9px;
     margin-right: 5px;
     display: inline-block;
     height: 16px;
@@ -900,23 +1086,24 @@ a.favorite-toggle {
 
 /* Kategorije */
 
-
 .kategorije .kategorija {
-    color:#fff;
+    color: #fff;
     padding: 20px;
     border-radius: 4px;
     margin-top: 20px;
 }
+
 .kategorije .kategorija:hover {
     opacity: 0.9;
     filter: alpha(opacity=90);
 }
 
 .kategorije .kategorija .naziv a {
-    color:#fff;
-    font-size:18px;
+    color: #fff;
+    font-size: 18px;
     font-weight: 600;
 }
+
 .kategorije .kategorija .opis {
     color: #fff;
     opacity: 0.7;
@@ -929,6 +1116,7 @@ a.favorite-toggle {
     opacity: 0.7;
     filter: alpha(opacity=70);
 }
+
 .kategorije hr {
     opacity: 0.2;
     filter: alpha(opacity=20);
@@ -941,15 +1129,15 @@ a.favorite-toggle {
     margin-top: 10px;
 }
 
-
 .bbp-forums-list a {
-    color:#fff;
+    color: #fff;
     font-weight: 600;
     font-size: 13px;
 }
 
 
 /* Forma */
+
 #new-post {
     display: none;
 }
@@ -960,10 +1148,11 @@ a.favorite-toggle {
     border: 1px solid #D63030;
 }
 
+
 /* Odgovori Forma */
 
 .odgovori_forma {
-    padding:15px;
+    padding: 15px;
     border: 2px dashed #EDEDED;
     background: #fff;
     border-radius: 4px;
@@ -978,6 +1167,7 @@ a.favorite-toggle {
     margin-top: -15px;
     margin-right: -15px;
 }
+
 .zatvori:hover,
 .zatvori:focus {
     opacity: 0.7;
@@ -985,7 +1175,8 @@ a.favorite-toggle {
     cursor: pointer;
 }
 
-.odgovori_forma select, .bbp-form select {
+.odgovori_forma select,
+.bbp-form select {
     display: block;
     width: 100%;
     height: 34px;
@@ -1005,17 +1196,20 @@ textarea#bbp_forum_content {
     box-sizing: border-box;
 }
 
+
 /* Oznake */
+
 .oznake a {
     display: inline-block;
     margin-bottom: 5px;
-    font-size:13px;
-    color:#000;
+    font-size: 13px;
+    color: #000;
     padding: 6px 12px;
     background: #F7F7F7;
     margin-right: 5px;
     border-radius: 4px;
 }
+
 
 /* Copyright */
 
@@ -1024,17 +1218,30 @@ textarea#bbp_forum_content {
     margin-bottom: 40px;
 }
 
+
 /* Automacki dropdown */
+
 @media (min-width: 768px) {
-    ul.nav li.dropdown:hover > ul.dropdown-menu { display: block }
+    ul.nav li.dropdown:hover > ul.dropdown-menu {
+        display: block
+    }
 }
 
+
 /* Credits */
-#infinite-footer { display: none }
-.blog-credits { display: none }
+
+#infinite-footer {
+    display: none
+}
+
+.blog-credits {
+    display: none
+}
+
 
 /* =WordPress Core
 -------------------------------------------------------------- */
+
 .alignnone {
     margin: 5px 20px 20px 0;
 }
@@ -1046,7 +1253,7 @@ div.aligncenter {
 }
 
 .alignright {
-    float:right;
+    float: right;
     margin: 5px 0 20px 20px;
 }
 
@@ -1078,7 +1285,8 @@ a img.aligncenter {
 .wp-caption {
     background: #fff;
     border: 1px solid #f0f0f0;
-    max-width: 96%; /* Image does not overflow the content area */
+    max-width: 96%;
+    /* Image does not overflow the content area */
     padding: 5px 3px 10px;
     text-align: center;
 }
@@ -1111,7 +1319,9 @@ a img.aligncenter {
     padding: 0 4px 5px;
 }
 
+
 /* Text meant only for screen readers. */
+
 .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important;
@@ -1138,5 +1348,6 @@ a img.aligncenter {
     text-decoration: none;
     top: 5px;
     width: auto;
-    z-index: 100000; /* Above WP toolbar. */
+    z-index: 100000;
+    /* Above WP toolbar. */
 }

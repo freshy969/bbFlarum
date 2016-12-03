@@ -57,22 +57,32 @@
                         <?php bbp_topic_pagination(); ?>
                     </div>
 
-                    <p>
+                    <div class="poruka">
+                        <p>
 <span class="ime">
 <i class="fa fa-reply" aria-hidden="true"></i>
     <?php //bbp_author_link( array( 'post_id' => bbp_get_topic_last_active_id(), 'type' => 'avatar', 'size' => 17 ) ); ?>
     <?php bbp_author_link( array( 'post_id' => bbp_get_topic_last_active_id(), 'type' => 'name') ); ?>
 </span>
-
-                        <span class="vrijeme">
+                            <span class="vrijeme">
 <?php do_action( 'bbp_theme_before_topic_freshness_link' ); ?>
 <?php bbp_topic_freshness_link(); ?>
 <?php do_action( 'bbp_theme_after_topic_freshness_link' ); ?>
 </span>
-                    </p>
+                        </p>
 
+                        <?php if ( bbp_is_topic_sticky()) : ?>
+                            <div class="excerpt">
+                                <?php the_excerpt(); ?>
+                            </div>
+                        <?php endif; ?>
+
+
+
+                    </div>
                 </div>
             </div>
+
         </div>
 
     </li>
