@@ -6,3 +6,5 @@
 5. On Forums Settings change Forum root should show	to Topics by Freshness.
 5. Install Yoast SEO and config Post Types > Custom Post Type Archives for Forum page title and description.
 6. If theme not work fine try to remove <?php wp_footer(); ?> from bbpress.php
+
+<img src="http://i.pics.rs/OLX0y" />
