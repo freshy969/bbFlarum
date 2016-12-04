@@ -6,6 +6,7 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <title><?php if ( bbp_is_single_user() || bbp_is_topic_tag() ) : ?><?php wp_title('');?> - <?php bloginfo('name'); ?><?php else : ?><?php wp_title('');?><?php endif; ?></title>
     <meta name="revisit-after" content="1 days">
+    <?php wp_head(); ?>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
@@ -167,6 +168,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/bbpress/jquery-ias.min.js"></script>
+
+<?php wp_footer(); ?>
 
 <script>
     var ias = jQuery.ias({
