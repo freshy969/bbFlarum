@@ -129,7 +129,7 @@ remove_action('wp_head', 'feed_links', 2);
 
 // Za izdvojene teme opis
 function wpdocs_excerpt_more( $more ) {
-    return '...';
+    return ' <a class="text-lowercase" href="'. get_permalink($post->ID) . '">' . __( 'Read more...' ) . '</a>';
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
