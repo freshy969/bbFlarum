@@ -129,7 +129,7 @@ remove_action('wp_head', 'feed_links', 2);
 
 // Za izdvojene teme opis
 function wpdocs_excerpt_more( $more ) {
-    return ' <a class="text-lowercase" href="'. get_permalink($post->ID) . '">' . __( 'Read more...' ) . '</a>';
+    return ' <a class="text-lowercase" data-toggle="tooltip" data-placement="bottom" title="' . translate( 'Open this topic', bbpress ) . '" href="'. get_permalink($post->ID) . '">' . __( 'Read more...' ) . '</a>';
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
