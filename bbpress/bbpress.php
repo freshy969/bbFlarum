@@ -43,7 +43,6 @@
         </div>
 
         <div class="collapse navbar-collapse" id="navmeni">
-
             <?php if ( bbp_allow_search() ) : ?>
                 <form role="search" method="get" id="bbp-searchform" action="<?php echo esc_url( home_url(bbp_get_root_slug()) ); ?>" class="pretraga navbar-form navbar-nav hidden-xs hidden-sm">
                     <div class="form-group has-feedback has-feedback-left">
@@ -52,7 +51,6 @@
                     </div>
                 </form>
             <?php endif; ?>
-
             <?php if (is_user_logged_in()) : ?>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
@@ -73,8 +71,8 @@
                     <a class="btn btn-danger" data-toggle="modal" data-target="#registracija"><?php _e( 'Register', 'bbpress' ); ?></a>
                 </div>
             <?php endif; ?>
-
         </div>
+
     </div>
 </nav>
 
@@ -100,7 +98,6 @@
     </div>
 </footer>
 
-
 <?php if (is_user_logged_in()) : ?>
 <?php else : ?>
     <div class="modal fade" id="prijava" tabindex="-1" role="dialog" aria-labelledby="prijava" aria-hidden="true">
@@ -118,19 +115,16 @@
                         <div class="form-group">
                             <input type="password" name="pwd" class="form-control" placeholder="<?php _e( 'Password', 'bbpress' ); ?>">
                         </div>
-                        <div class="text-left">
-                            <p>
-                                <input name="rememberme" type="checkbox" id="rememberme" value="forever" checked> Zapamti me
-                            </p>
+                        <div class="form-group text-left">
+                            <input name="rememberme" type="checkbox" id="rememberme" value="forever" checked> Zapamti me
                         </div>
-                        <div class="alert alert-warning">
+                        <div class="form-group">
                             <a href="<?php echo wp_lostpassword_url(); ?>" title="<?php echo __('Lost your password?'); ?>"><?php echo __('Lost your password?'); ?></a>
                         </div>
                         <div class="form-group">
                             <button type="submit" name="wp-submit" class="btn btn-block btn-success"><?php _e( 'Log In', 'bbpress' ); ?></button>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>
@@ -156,13 +150,11 @@
                         <input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>?register=true" />
                         <input type="hidden" name="user-cookie" value="1">
                     </form>
-
                 </div>
             </div>
         </div>
     </div>
 <?php endif; ?>
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -197,24 +189,13 @@
                 $("#new-post").fadeToggle();
             });
         });
-
     $(document).ready(function() {
         $(".zatvori").click(function() {
             $("#new-post").fadeOut();
         });
     });
-
     $(".poruka p img").addClass("img-thumbnail")
 </script>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=683230681834225";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
 
 </body>
 </html>
