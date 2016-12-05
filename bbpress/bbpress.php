@@ -194,7 +194,8 @@
             $("#new-post").fadeOut();
         });
     });
-    $(".poruka p img").addClass("img-thumbnail")
+
+    $(".odgovor p img").addClass("img-thumbnail")
 </script>
 
 </body>

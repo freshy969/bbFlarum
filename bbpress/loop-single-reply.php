@@ -52,7 +52,7 @@
                     <span class="vreme"> pre <?php bbp_reply_post_date(0, true); ?></span>
                 </div>
 
-                <div class="poruka">
+                <div class="odgovor">
                     <?php do_action( 'bbp_theme_before_reply_content' ); ?>
                     <?php bbp_reply_content(); ?>
                     <?php do_action( 'bbp_theme_after_reply_content' ); ?>
