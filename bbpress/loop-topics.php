@@ -8,10 +8,7 @@
  */
 
 ?>
-
 <?php do_action( 'bbp_template_before_topics_loop' ); ?>
-
-
 <div id="content">
 <ul id="bbp-forum-<?php bbp_forum_id(); ?>" class="load list-unstyled">
 <li>
@@ -21,6 +18,4 @@
 </li>
 </ul>
 </div>
-
-
 <?php do_action( 'bbp_template_after_topics_loop' ); ?>

@@ -8,16 +8,13 @@
     <meta name="revisit-after" content="1 days">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bbpress/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bbpress/style.min.css" type="text/css" media="screen">
     <link href="<?php echo get_template_directory_uri(); ?>/bbpress/img/favicon.png" rel="icon" type="image/x-icon">
 </head>
 <?php flush(); ?>
 <body>
-
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-
         <div class="navbar-header">
             <?php if (is_user_logged_in()) : ?>
                 <ul class="nav navbar-nav navbar-toggle">
@@ -41,7 +38,6 @@
             <?php endif; ?>
             <a class="navbar-brand" href="<?php echo esc_url(home_url(bbp_get_root_slug())); ?>" title="<?php bloginfo('name'); ?>" data-toggle="tooltip" data-placement="bottom"></a>
         </div>
-
         <div class="collapse navbar-collapse" id="navmeni">
             <?php if ( bbp_allow_search() ) : ?>
                 <form role="search" method="get" id="bbp-searchform" action="<?php echo esc_url( home_url(bbp_get_root_slug()) ); ?>" class="pretraga navbar-form navbar-nav hidden-xs hidden-sm">
@@ -72,14 +68,11 @@
                 </div>
             <?php endif; ?>
         </div>
-
     </div>
 </nav>
-
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <div class="container"><?php the_content(); ?></div>
 <?php endwhile; ?><?php endif; ?>
-
 <footer>
     <div class="container">
         <div class="copyright">
@@ -97,7 +90,6 @@
         </div>
     </div>
 </footer>
-
 <?php if (is_user_logged_in()) : ?>
 <?php else : ?>
     <div class="modal fade" id="prijava" tabindex="-1" role="dialog" aria-labelledby="prijava" aria-hidden="true">
@@ -122,14 +114,13 @@
                             <a href="<?php echo wp_lostpassword_url(); ?>" title="<?php echo __('Lost your password?'); ?>"><?php echo __('Lost your password?'); ?></a>
                         </div>
                         <div class="form-group">
-                            <button type="submit" name="wp-submit" class="btn btn-block btn-success"><?php _e( 'Log In', 'bbpress' ); ?></button>
+                            <button type="submit" name="wp-submit" class="btn btn-block btn-default"><?php _e( 'Log In', 'bbpress' ); ?></button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="modal fade" id="registracija" tabindex="-1" role="dialog" aria-labelledby="registracija" aria-hidden="true">
         <div class="modal-dialog modal-sm">
             <div class="modal-content text-center">
@@ -146,7 +137,7 @@
                             <input type="text" name="user_email" class="form-control" placeholder="<?php _e( 'Email', 'bbpress' ); ?>">
                         </div>
                         <div class="alert alert-warning"><?php _e( 'Check your e-mail for your new password.', 'bbpress' ); ?></div>
-                        <button type="submit" name="user-submit" class="btn btn-block btn-success"><?php _e( 'Register', 'bbpress' ); ?></button>
+                        <button type="submit" name="user-submit" class="btn btn-block btn-danger"><?php _e( 'Register', 'bbpress' ); ?></button>
                         <input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>?register=true" />
                         <input type="hidden" name="user-cookie" value="1">
                     </form>
@@ -155,13 +146,10 @@
         </div>
     </div>
 <?php endif; ?>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/bbpress/jquery-ias.min.js"></script>
-
 <?php wp_footer(); ?>
-
 <script>
     var ias = jQuery.ias({
         container:  '#content',
@@ -170,11 +158,9 @@
         next:       '.pagination span.current + a.page-numbers',
     });
     ias.extension(new IASSpinnerExtension({
-        src: '<?php echo get_template_directory_uri(); ?>/bbpress/img/loading.gif',
-        html: '<div class="container ias-spinner" style="text-align: left;"><img src="{src}"/></div>',
+        html: '<div style="text-align: center;"><i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i></div>',
     }));
 </script>
-
 <script>
     $(function () { $('[data-toggle="tooltip"]').tooltip() });
     $(document).ready(
@@ -194,9 +180,7 @@
             $("#new-post").fadeOut();
         });
     });
-
     $(".odgovor p img").addClass("img-thumbnail")
 </script>
-
 </body>
 </html>
