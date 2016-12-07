@@ -1138,8 +1138,8 @@ a.favorite-toggle {
 
 .alert-danger {
     color: #fff;
-    background: #d83e3e;
-    border: 1px solid #d83e3e;
+    background: #D63030;
+    border: 1px solid #D63030;
     font-size:13px;
 }
 .alert-warning {
@@ -1154,8 +1154,9 @@ a.favorite-toggle {
     background: #FFEE95;
 }
 .alert-success {
-    background: #b4f1af;
-    border: 1px solid #b4f1af;
+    color:#fff;
+    background:#20935A;
+    border:1px solid #20935A;
     font-size:13px;
 }
 
