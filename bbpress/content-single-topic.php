@@ -63,14 +63,14 @@
 
 
         <div class="col-md-2 col-xs-12 col-sm-12">
-            <a class="btn btn-warning btn-block zapocni-temu" href="#new-post" style="background: <?php echo get_field('color', bbp_get_topic_forum_id()); ?>;border-color:<?php echo get_field('color', bbp_get_topic_forum_id()); ?>; "><?php _e( 'Reply', 'bbpress' ); ?></a>
             <?php if ( is_user_logged_in() ) : ?>
-                <button class="btn btn-default btn-block">
+            <a class="btn btn-warning btn-block zapocni-temu" href="#new-post" style="background: <?php echo get_field('color', bbp_get_topic_forum_id()); ?>;border-color:<?php echo get_field('color', bbp_get_topic_forum_id()); ?>;"><?php _e( 'Reply', 'bbpress' ); ?></a>
+                <button class="btn btn-default btn-block" style="margin-bottom: 30px;">
                     <?php bbp_user_favorites_link(array( 'before' => '', 'favorite' => '<i class="fa fa-star" aria-hidden="true"></i> '. translate('Favorite', bbpress) .'', 'favorited' => '<i class="fa fa-star-o" aria-hidden="true"></i> '. translate('Unfavorite', bbpress) .' ' ) ); ?>
                 </button>
             <?php endif; ?>
             <?php if ( bbp_allow_topic_tags() ) : ?>
-                <div class="naslovi" style="margin-top: 30px;">
+                <div class="naslovi">
                     <h3 class="text-uppercase"><?php _e( 'Tags:', 'bbpress' ); ?></h3><hr>
                     <span class="oznake">
 			            <?php bbp_topic_tag_list( '', array('before' => '', 'sep' => '', 'after' => '') ); ?>

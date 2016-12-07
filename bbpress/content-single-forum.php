@@ -29,7 +29,6 @@
             'show_topic_count'    => true,
             'show_reply_count'    => false,
         )); ?>
-            <li class="prijava"><?php bbp_forum_subscription_link( array( 'before' => '', 'subscribe' => ''. translate('Subscribe', bbpress) .'', 'unsubscribe' => ''. translate('Unsubscribe', bbpress) .' ' ) ); ?></li>
             </ul>
         </div>
 
@@ -50,7 +49,6 @@
                 </ul>
 
                 <ul class="list-unstyled">
-
                     <?php $this_post = $post->ID; ?>
                     <?php query_posts(array('post_type' => bbp_get_forum_post_type(), 'orderby' => 'menu_order', 'order' => 'asc', 'posts_per_page' => '99', 'post_parent' => 0));
                     if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -80,6 +78,7 @@
                     <?php endif; ?>
                         <?php wp_reset_query(); ?>
                     </ul>
+
                 </div>
 
                         <?php if (is_user_logged_in()) : ?>
@@ -91,7 +90,11 @@
                         <li><a href="<?php echo esc_url(home_url(bbp_get_root_slug(). '/view/popular')); ?>"> <?php _e( 'Most popular topics', 'bbpress' ); ?></a></li>
                         <li><a href="<?php echo esc_url(home_url(bbp_get_root_slug(). '/view/no-replies')); ?>"> <?php _e( 'Topics with no replies', 'bbpress' ); ?></a></li>
                     </ul>
-                </div>
+                        </div>
+
+                        <?php if (is_user_logged_in()) : ?>
+                        <div class="btn btn-default hidden-xs" data-toggle="tooltip" data-placement="top" title="<?php _e( 'Forum Subscriptions', 'bbpress' ); ?>"><?php bbp_forum_subscription_link( array( 'before' => '', 'subscribe' => '<i class="fa fa-eye" aria-hidden="true"></i> '. translate('Subscribe', bbpress) .'', 'unsubscribe' => '<i class="fa fa-eye-slash" aria-hidden="true"></i> '. translate('Unsubscribe', bbpress) .' ' ) ); ?></div>
+                        <?php endif; ?>
 
                         <div class="pull-right">
                             <a data-toggle="tooltip" data-placement="top" title="<?php echo __('Update Now'); ?>" class="btn btn-default" href="#" role="button" onclick="location.reload(true); return false;"><i class="fa fa-refresh" aria-hidden="true"></i></a>
