@@ -93,7 +93,7 @@
                         </div>
 
                         <?php if (is_user_logged_in()) : ?>
-                        <div class="btn btn-default hidden-xs" data-toggle="tooltip" data-placement="top" title="<?php _e( 'Forum Subscriptions', 'bbpress' ); ?>"><?php bbp_forum_subscription_link( array( 'before' => '', 'subscribe' => '<i class="fa fa-eye" aria-hidden="true"></i> '. translate('Subscribe', bbpress) .'', 'unsubscribe' => '<i class="fa fa-eye-slash" aria-hidden="true"></i> '. translate('Unsubscribe', bbpress) .' ' ) ); ?></div>
+                        <div class="btn btn-default hidden-xs"><?php bbp_forum_subscription_link( array( 'before' => '', 'subscribe' => '<i class="fa fa-eye" aria-hidden="true"></i> '. translate('Subscribe', bbpress) .'', 'unsubscribe' => '<i class="fa fa-eye-slash" aria-hidden="true"></i> '. translate('Unsubscribe', bbpress) .' ' ) ); ?></div>
                         <?php endif; ?>
 
                         <div class="pull-right">
