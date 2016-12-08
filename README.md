@@ -9,14 +9,14 @@
 
 Test this theme on Shared vs Flarum.org and Discourse.org
 
-Forum open
-bbFlarum: https://tools.pingdom.com/#!/bwxF16/https://www.sablja.com/forum/
-Flarum: https://tools.pingdom.com/#!/dNBikD/https://discuss.flarum.org/
-Discourse: https://tools.pingdom.com/#!/ey85Js/https://try.discourse.org/
+Forum open<br>
+bbFlarum: https://tools.pingdom.com/#!/bwxF16/https://www.sablja.com/forum/<br>
+Flarum: https://tools.pingdom.com/#!/dNBikD/https://discuss.flarum.org/<br>
+Discourse: https://tools.pingdom.com/#!/ey85Js/https://try.discourse.org/<br>
 
-Topick open
-bbFlarum: https://tools.pingdom.com/#!/c6wWcq/https://www.sablja.com/forum/tema/nagrade-za-najaktivnije-clanove/
-Flarum: https://tools.pingdom.com/#!/bmeIyQ/https://discuss.flarum.org/d/2072-international-support-sites
-Discourse: https://tools.pingdom.com/#!/cOlyr9/https://try.discourse.org/t/this-site-is-a-sandbox-it-is-reset-every-day/57
+Topick open<br>
+bbFlarum: https://tools.pingdom.com/#!/c6wWcq/https://www.sablja.com/forum/tema/nagrade-za-najaktivnije-clanove/<br>
+Flarum: https://tools.pingdom.com/#!/bmeIyQ/https://discuss.flarum.org/d/2072-international-support-sites<br>
+Discourse: https://tools.pingdom.com/#!/cOlyr9/https://try.discourse.org/t/this-site-is-a-sandbox-it-is-reset-every-day/57<br>
 
 <img src="http://i.pics.rs/OLX0y" />
