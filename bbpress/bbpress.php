@@ -6,6 +6,7 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <title><?php if ( bbp_is_single_user() || bbp_is_topic_tag() ) : ?><?php wp_title('');?> - <?php bloginfo('name'); ?><?php else : ?><?php wp_title('');?><?php endif; ?></title>
     <meta name="revisit-after" content="1 days">
+    <?php wp_head(); ?>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -37,7 +38,7 @@
                     <a class="btn btn-danger" data-toggle="modal" data-target="#registracija"><?php _e( 'Register', 'bbpress' ); ?></a>
                 </div>
             <?php endif; ?>
-            <a class="navbar-brand" href="<?php echo esc_url(home_url(bbp_get_root_slug())); ?>" title="<?php bloginfo('name'); ?>" data-toggle="tooltip" data-placement="bottom"></a>
+            <a class="navbar-brand" href="<?php echo esc_url(home_url(bbp_get_root_slug())); ?>" title="<?php bloginfo('name'); ?>" data-toggle="tooltip" data-placement="bottom"><?php _e( 'bbPress', 'bbpress' ); ?></a>
         </div>
         <div class="collapse navbar-collapse" id="navmeni">
             <?php if ( bbp_allow_search() ) : ?>
@@ -182,6 +183,14 @@
         });
     });
     $(".odgovor p img").addClass("img-thumbnail")
+</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-84798831-5', 'auto');
+    ga('send', 'pageview');
 </script>
 </body>
 </html>

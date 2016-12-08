@@ -163,7 +163,7 @@
 <?php elseif ( bbp_is_topic_closed() ) : ?>
 
 	<div id="no-reply-<?php bbp_topic_id(); ?>" class="bbp-no-reply">
-		<div class="alert alert-warning">
+		<div class="alert alert-warning text-center">
 			<p><?php printf( __( 'The topic &#8216;%s&#8217; is closed to new replies.', 'bbpress' ), bbp_get_topic_title() ); ?></p>
 		</div>
 	</div>

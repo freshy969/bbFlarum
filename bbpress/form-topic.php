@@ -206,7 +206,7 @@
         <?php elseif ( bbp_is_forum_closed() ) : ?>
 
             <div id="no-topic-<?php bbp_topic_id(); ?>" class="bbp-no-topic">
-                <div class="alert alert-warning text-center">
+                <div class="alert alert-warning">
                     <p><?php printf( __( 'The forum &#8216;%s&#8217; is closed to new topics and replies.', 'bbpress' ), bbp_get_forum_title() ); ?></p>
                 </div>
             </div>
@@ -214,7 +214,7 @@
         <?php else : ?>
 
             <div id="no-topic-<?php bbp_topic_id(); ?>" class="bbp-no-topic">
-                <div class="alert alert-warning text-center">
+                <div class="alert alert-warning">
                     <p><?php is_user_logged_in() ? _e( 'You cannot create new topics.', 'bbpress' ) : _e( 'You must be logged in to create new topics.', 'bbpress' ); ?></p>
                 </div>
             </div>
