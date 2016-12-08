@@ -9,17 +9,21 @@
 
 ?>
 
-<div id="bbpress-forums">
+</div>
+<div class="naslov text-center">
+    <div class="container">
+        <h1><?php esc_attr_e( 'Search', 'bbpress' ); ?></h1>
+        <p><?php esc_attr_e( 'The bbPress forum search form.', 'bbpress' ); ?></p>
+    </div>
+</div>
 
-	<?php bbp_breadcrumb(); ?>
+<div class="container">
 
 	<?php bbp_set_query_name( bbp_get_search_rewrite_id() ); ?>
 
 	<?php do_action( 'bbp_template_before_search' ); ?>
 
 	<?php if ( bbp_has_search_results() ) : ?>
-
-		 <?php bbp_get_template_part( 'pagination', 'search' ); ?>
 
 		 <?php bbp_get_template_part( 'loop',       'search' ); ?>
 
@@ -37,5 +41,4 @@
 
 	<?php do_action( 'bbp_template_after_search_results' ); ?>
 
-</div>
 
