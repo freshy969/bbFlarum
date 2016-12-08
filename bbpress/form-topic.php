@@ -67,7 +67,7 @@
             <?php do_action( 'bbp_theme_before_topic_form_title' ); ?>
             <div class="row">
                 <div class="form-group col-md-8">
-                    <input placeholder="Naslov teme (najveća moguća dužina: 80)" class="form-control" type="text" id="bbp_topic_title" value="<?php bbp_form_topic_title(); ?>" tabindex="<?php bbp_tab_index(); ?>" size="40" name="bbp_topic_title" maxlength="<?php bbp_title_max_length(); ?>" />
+                    <input placeholder="<?php printf( __( 'Topic Title (Maximum Length: %d):', 'bbpress' ), bbp_get_title_max_length() ); ?>" class="form-control" type="text" id="bbp_topic_title" value="<?php bbp_form_topic_title(); ?>" tabindex="<?php bbp_tab_index(); ?>" size="40" name="bbp_topic_title" maxlength="<?php bbp_title_max_length(); ?>" />
                 </div>
 
                 <?php if ( !bbp_is_single_forum() ) : ?>
