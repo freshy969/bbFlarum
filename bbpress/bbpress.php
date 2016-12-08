@@ -87,7 +87,7 @@
                 ?>
             </div>
             <div class="pull-right">
-                <a href="http://www.github.com/Sceko/bbFlarum" target="_blank" title="Powered by bbPress">Powered by bbPress</a>
+             <?php printf(__( '%1$s is proudly powered by %2$s' ), get_bloginfo('name'), '<a href="http://www.github.com/Sceko/bbFlarum">bbPress</a>'); ?></a>
             </div>
         </div>
     </div>
