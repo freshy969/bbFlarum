@@ -41,14 +41,12 @@
             <a class="navbar-brand" href="<?php echo esc_url(home_url(bbp_get_root_slug())); ?>" title="<?php bloginfo('name'); ?>" data-toggle="tooltip" data-placement="bottom"><?php bloginfo('name'); ?></a>
         </div>
         <div class="collapse navbar-collapse" id="navmeni">
-            <?php if ( bbp_allow_search() ) : ?>
                 <form role="search" method="get" id="bbp-searchform" action="<?php echo esc_url( home_url(bbp_get_root_slug()) ); ?>" class="pretraga navbar-form navbar-nav hidden-xs hidden-sm">
                     <div class="form-group has-feedback has-feedback-left">
                         <input data-toggle="tooltip" data-placement="right" title="<?php _e( 'Search', 'bbpress' ); ?>" type="text" name="ts" id="ts" size="30" class="form-control">
                         <span class="fa fa-search form-control-feedback" aria-hidden="true"></span>
                     </div>
                 </form>
-            <?php endif; ?>
             <?php if (is_user_logged_in()) : ?>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
