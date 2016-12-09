@@ -528,6 +528,22 @@ hr {
     color:#8C8C8C;
 }
 
+.teme .poruka .naziv .bbp-topic-pagination a {
+    border-radius:4px;
+    padding:1px 6px;
+    font-size:13px;
+    font-weight:400;
+    color:#8C8C8C;
+    border:1px solid #EDEDED;
+    background:#fff;
+}
+
+.teme .poruka .naziv .bbp-topic-pagination a:hover {
+    color:#fff;
+    background:#E3472F;
+    border:1px solid #E3472F;
+}
+
 .teme .poruka .ime i {
     color:#AEAEAE;
     font-size:13px;
@@ -610,22 +626,6 @@ hr {
 
 .teme .omiljeno a {
     color:#000;
-}
-
-.naziv .bbp-topic-pagination a {
-    border-radius:4px;
-    padding:1px 6px;
-    font-size:13px;
-    font-weight:400;
-    color:#8C8C8C;
-    border:1px solid #EDEDED;
-    background:#fff;
-}
-
-.naziv .bbp-topic-pagination a:hover {
-    color:#fff;
-    background:#E3472F;
-    border:1px solid #E3472F;
 }
 
 .prvi_odgovor:first-child {
@@ -909,7 +909,6 @@ hr {
 }
 
 .lista_kategorija .kocka {
-    font-size:9px;
     margin-right:5px;
     display:inline-block;
     height:16px;
