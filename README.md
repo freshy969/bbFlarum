@@ -18,5 +18,3 @@ Topick open<br>
 bbFlarum: https://tools.pingdom.com/#!/c6wWcq/https://www.sablja.com/forum/tema/nagrade-za-najaktivnije-clanove/<br>
 Flarum: https://tools.pingdom.com/#!/bmeIyQ/https://discuss.flarum.org/d/2072-international-support-sites<br>
 Discourse: https://tools.pingdom.com/#!/cOlyr9/https://try.discourse.org/t/this-site-is-a-sandbox-it-is-reset-every-day/57<br>
-
-<img src="http://i.pics.rs/OLX0y" />
