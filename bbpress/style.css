@@ -269,17 +269,17 @@ hr {
 
 .btn-primary,.btn-primary:focus,.btn-primary.focus,.btn-primary:hover,.btn-primary:active,.btn-primary.active,.btn-primary:active:hover,.btn-primary.active:hover,.open > .dropdown-toggle.btn-primary:hover,.btn-primary:active:focus,.btn-primary.active:focus,.open > .dropdown-toggle.btn-primary:focus,.btn-primary:active.focus,.btn-primary.active.focus,.open > .dropdown-toggle.btn-primary.focus {
     font-weight:400;
-    border-radius:0;
+    border-radius:4px;
     color:#fff;
     cursor:pointer;
-    background:#00AEEF;
-    border:1px solid #00AEEF;
+    background:#4B93D1;
+    border:1px solid #4B93D1;
 }
 
 .btn-primary:hover {
     color:#fff;
-    background:#33BEF2;
-    border:1px solid #33BEF2;
+    background:#6FA8DA;
+    border:1px solid #6FA8DA;
 }
 
 .btn-default,.btn-default:focus,.btn-default.focus,.btn-default:hover,.btn-default:active,.btn-default.active,.btn-default:active:hover,.btn-default.active:hover,.open > .dropdown-toggle.btn-default:hover,.btn-default:active:focus,.btn-default.active:focus,.open > .dropdown-toggle.btn-default:focus,.btn-default:active.focus,.btn-default.active.focus,.open > .dropdown-toggle.btn-default.focus {
@@ -446,60 +446,89 @@ hr {
     color:#000;
 }
 
+.dobrodosli {
+    margin-top:-40px;
+    padding-top:40px;
+    padding-bottom:40px;
+    background:#EDEDED;
+    color:#8C8C8C;
+    margin-bottom:40px;
+}
+.dobrodosli a {
+    color:#000;
+    text-decoration: underline;
+}
+.dobrodosli h1 {
+    margin:0;
+    font-size:20px;
+    margin-top:5px;
+}
+
+.dobrodosli p {
+    margin-top:5px;
+    margin-bottom:0;
+    padding:0;
+}
+
 .teme {
-    padding:10px;
-    margin-bottom:20px;
+    padding:15px 10px;
+    border-bottom: 1px solid #F1F1F1;
 }
 
 .teme:hover {
     border-radius:4px;
-    background:#EDEDED;
+    background:#fafafa;
 }
 
 .teme p {
     margin-bottom:0;
-    margin-top:5px;
+    margin-top:2px;
 }
 
 .teme .avatar img {
     border-radius:50%;
-    margin-right:15px;
 }
 
 .teme .status .fa-bullhorn {
     position:absolute;
     top:-1px;
-    left:44px;
+    left:37px;
     color:#fff;
     background:#48BF83;
     border-radius:50%;
     padding:3px 4px;
-    border:2px solid #fff;
     font-size:14px;
+    -webkit-box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
+    -moz-box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
+    box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
 }
 
 .teme .status .fa-thumb-tack {
     position:absolute;
     top:-1px;
-    left:44px;
+    left:37px;
     color:#fff;
     background:#D63030;
     border-radius:50%;
     padding:3px 6px;
-    border:2px solid #fff;
     font-size:14px;
+    -webkit-box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
+    -moz-box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
+    box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
 }
 
 .teme .status .fa-lock {
     position:absolute;
     top:-1px;
-    left:44px;
+    left:37px;
     color:#fff;
     background:#888;
     border-radius:50%;
     padding:3px 6px;
-    border:2px solid #fff;
     font-size:14px;
+    -webkit-box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
+    -moz-box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
+    box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
 }
 
 .teme .novo {
@@ -514,45 +543,25 @@ hr {
 }
 
 .teme .poruka {
-    margin-left:65px;
+    margin-left:50px;
 }
 
 .teme .poruka .naziv a {
     color:#000;
-    font-size:16px;
+    font-size:15px;
     font-weight:400;
     margin-right:5px;
 }
 
-.teme .poruka .naziv a:visited {
-    color:#8C8C8C;
-}
-
-.teme .poruka .naziv .bbp-topic-pagination a {
-    border-radius:4px;
-    padding:1px 6px;
-    font-size:13px;
-    font-weight:400;
-    color:#8C8C8C;
-    border:1px solid #EDEDED;
-    background:#fff;
-}
-
-.teme .poruka .naziv .bbp-topic-pagination a:hover {
-    color:#fff;
-    background:#E3472F;
-    border:1px solid #E3472F;
-}
-
 .teme .poruka .ime i {
     color:#AEAEAE;
-    font-size:13px;
+    font-size:11px;
 }
 
 .teme .poruka .ime a {
     font-weight:600;
     color:#AEAEAE;
-    font-size:13px;
+    font-size:12px;
     margin-right:5px;
 }
 
@@ -562,13 +571,14 @@ hr {
 
 .teme .poruka .vrijeme a {
     color:#AEAEAE;
-    font-size:13px;
+    font-size:12px;
     margin-right:10px;
 }
 
 .teme .poruka .excerpt {
     color:#AEAEAE;
     font-size:13px;
+    margin-top: 5px;
 }
 
 .teme .kategorija {
@@ -628,6 +638,22 @@ hr {
     color:#000;
 }
 
+.naziv .bbp-topic-pagination a {
+    border-radius:4px;
+    padding:1px 6px;
+    font-size:13px;
+    font-weight:400;
+    color:#8C8C8C;
+    border:1px solid #EDEDED;
+    background:#fff;
+}
+
+.naziv .bbp-topic-pagination a:hover {
+    color:#fff;
+    background:#E3472F;
+    border:1px solid #E3472F;
+}
+
 .prvi_odgovor:first-child {
     border:1px solid #EDEDED;
     padding:10px;
@@ -640,6 +666,12 @@ hr {
     border-bottom:none;
 }
 
+.odgovori {
+    padding-bottom:20px;
+    border-bottom:1px solid #EDEDED;
+    margin-bottom:20px;
+}
+
 .odgovori .avatar img {
     border-radius:50%;
     margin-right:15px;
@@ -647,13 +679,13 @@ hr {
 
 .odgovori .ime {
     margin-top:5px;
-    font-size:16px;
+    font-size:14px;
     font-weight:600;
 }
 
 .odgovori .ime .vreme {
     font-weight:400;
-    color:#ccc;
+    color:#AEAEAE;
     font-size:14px;
     margin-left:5px;
 }
@@ -662,44 +694,32 @@ hr {
     margin-top:-3px;
 }
 
-.odgovori {
-    padding-bottom:20px;
-    border-bottom:1px solid #EDEDED;
-    margin-bottom:20px;
-}
-
 .odgovori .status .fa-wrench {
     position:absolute;
     top:-1px;
-    left:44px;
+    left:47px;
     color:#fff;
     background:#D63030;
     border-radius:50%;
-    padding:3px 5px;
-    border:2px solid #fff;
-    font-size:14px;
-}
-
-.odgovori .online {
-    position:absolute;
-    top:-1px;
-    left:48px;
-    color:#fff;
-    background:#4B93D1;
-    border-radius:50%;
     padding:3px 4px;
-    border:2px solid #fff;
     font-size:14px;
+    -webkit-box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
+    -moz-box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
+    box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
 }
 
 .odgovori .odgovor {
     margin-left:65px;
     margin-top:7px;
-    font-size:16px;
+    font-size:15px;
     color:#555;
     word-wrap:break-word;
     height:auto;
     overflow:hide;
+}
+
+.odgovori .odgovor strong {
+    color:#000;
 }
 
 .odgovori .odgovor pre {
@@ -723,7 +743,7 @@ hr {
     border-left:5px solid #8C8C92;
 }
 
-.img-thumbnail {
+.odgovori .odgovor .img-thumbnail {
     padding:5px;
     background-color:#fff;
     border:1px solid #EDEDED;
@@ -770,8 +790,10 @@ hr {
     background:#48BF83;
     border-radius:50%;
     padding:3px 4px;
-    border:2px solid #fff;
     font-size:14px;
+    -webkit-box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
+    -moz-box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
+    box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
 }
 
 .naslov .status .fa-thumb-tack {
@@ -779,8 +801,10 @@ hr {
     background:#D63030;
     border-radius:50%;
     padding:3px 6px;
-    border:2px solid #fff;
     font-size:14px;
+    -webkit-box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
+    -moz-box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
+    box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
 }
 
 .naslov .status .fa-lock {
@@ -788,8 +812,10 @@ hr {
     background:#888;
     border-radius:50%;
     padding:3px 6px;
-    border:2px solid #fff;
     font-size:14px;
+    -webkit-box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
+    -moz-box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
+    box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
 }
 
 .naslov h1 {
@@ -909,6 +935,7 @@ hr {
 }
 
 .lista_kategorija .kocka {
+    font-size:9px;
     margin-right:5px;
     display:inline-block;
     height:16px;
