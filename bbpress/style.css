@@ -35,17 +35,26 @@ hr {
 }
 
 .navbar-brand {
-    float:left;
-    height:50px;
-    padding:15px;
-    font-size:18px;
-    line-height:20px;
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 32px;
+    line-height: 20px;
+    background: url("img/logo.png") no-repeat;
+    width: 87px;
 }
 
 @media (min-width: 768px) {
-    .navbar > .container .navbar-brand,.navbar > .container-fluid .navbar-brand {
-        margin-left:-15px;
-        border-right:1px solid #EDEDED;
+    .navbar > .container .navbar-brand,
+    .navbar > .container-fluid .navbar-brand {
+        margin-left: 0px;
+        border-right: 1px solid #EDEDED;
+    }
+}
+@media (max-width: 768px) {
+    .navbar > .container .navbar-brand,
+    .navbar > .container-fluid .navbar-brand {
+        margin-left: 15px;
     }
 }
 
@@ -528,22 +537,6 @@ hr {
     color:#8C8C8C;
 }
 
-.teme .poruka .naziv .bbp-topic-pagination a {
-    border-radius:4px;
-    padding:1px 6px;
-    font-size:13px;
-    font-weight:400;
-    color:#8C8C8C;
-    border:1px solid #EDEDED;
-    background:#fff;
-}
-
-.teme .poruka .naziv .bbp-topic-pagination a:hover {
-    color:#fff;
-    background:#E3472F;
-    border:1px solid #E3472F;
-}
-
 .teme .poruka .ime i {
     color:#AEAEAE;
     font-size:13px;
@@ -628,6 +621,22 @@ hr {
     color:#000;
 }
 
+.naziv .bbp-topic-pagination a {
+    border-radius:4px;
+    padding:1px 6px;
+    font-size:13px;
+    font-weight:400;
+    color:#8C8C8C;
+    border:1px solid #EDEDED;
+    background:#fff;
+}
+
+.naziv .bbp-topic-pagination a:hover {
+    color:#fff;
+    background:#E3472F;
+    border:1px solid #E3472F;
+}
+
 .prvi_odgovor:first-child {
     border:1px solid #EDEDED;
     padding:10px;
@@ -700,6 +709,10 @@ hr {
     word-wrap:break-word;
     height:auto;
     overflow:hide;
+}
+
+.odgovori .odgovor strong {
+    color:#000;
 }
 
 .odgovori .odgovor pre {
@@ -909,6 +922,7 @@ hr {
 }
 
 .lista_kategorija .kocka {
+    font-size:9px;
     margin-right:5px;
     display:inline-block;
     height:16px;
