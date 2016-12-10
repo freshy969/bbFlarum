@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Forums Loop - Single Forum
+ * Search Loop - Single Forum
  *
  * @package bbPress
  * @subpackage Theme
@@ -9,61 +9,38 @@
 
 ?>
 
-<div class="kategorije" style="background: <?php echo get_field('color', bbp_get_topic_forum_id()) ?>;">
+<div class="bbp-forum-header">
 
+	<div class="bbp-meta">
 
-    <div class="naziv">
+		<span class="bbp-forum-post-date"><?php printf( __( 'Last updated %s', 'bbpress' ), bbp_get_forum_last_active_time() ); ?></span>
 
-        <?php do_action( 'bbp_theme_before_forum_title' ); ?>
+		<a href="<?php bbp_forum_permalink(); ?>" class="bbp-forum-permalink">#<?php bbp_forum_id(); ?></a>
 
-        <a href="<?php bbp_forum_permalink(); ?>"><?php bbp_forum_title(); ?> <span class="pull-right badge"> <?php echo bbp_get_forum_topic_count(get_the_ID()) ?></span></a>
+	</div><!-- .bbp-meta -->
 
-        <?php do_action( 'bbp_theme_after_forum_title' ); ?>
+	<div class="bbp-forum-title">
 
-        <!--		<span style="margin-left:20px;">-->
-        <!--		--><?php //if ( bbp_is_user_home() && bbp_is_subscriptions() ) : ?>
-        <!--			--><?php //do_action( 'bbp_theme_before_forum_subscription_action' ); ?>
-        <!--			--><?php //bbp_forum_subscription_link( array( 'before' => '', 'subscribe' => '', 'unsubscribe' => '' ) ); ?>
-        <!--			--><?php //do_action( 'bbp_theme_after_forum_subscription_action' ); ?>
-        <!--		--><?php //endif; ?>
-        <!--		</span>-->
+		<?php do_action( 'bbp_theme_before_forum_title' ); ?>
 
-    </div>
+		<h3><?php _e( 'Forum: ', 'bbpress' ); ?><a href="<?php bbp_forum_permalink(); ?>"><?php bbp_forum_title(); ?></a></h3>
 
-    <div class="opis">
-        <?php do_action( 'bbp_theme_before_forum_description' ); ?>
+		<?php do_action( 'bbp_theme_after_forum_title' ); ?>
 
-        <?php bbp_forum_content(); ?>
+	</div><!-- .bbp-forum-title -->
 
-        <?php do_action( 'bbp_theme_after_forum_description' ); ?>
-    </div>
+</div><!-- .bbp-forum-header -->
 
-    <?php bbp_forum_row_actions(); ?>
+<div id="post-<?php bbp_forum_id(); ?>" <?php bbp_forum_class(); ?>>
 
+	<div class="bbp-forum-content">
 
+		<?php do_action( 'bbp_theme_before_forum_content' ); ?>
 
-    <span class="pod_kategorije">
-		<?php do_action( 'bbp_theme_before_forum_sub_forums' ); ?>
+		<?php bbp_forum_content(); ?>
 
-        <div class="pod_kategorije">
-            <ul class="list-inline">
-        <?php bbp_list_forums(array (
-            'before'              => '',
-            'after'               => '',
-            'link_before'         => '<li>',
-            'link_after'          => '</li>',
-            'count_before'        => ' <span class="badge">',
-            'count_after'         => '</span> ',
-            'count_sep'           => '',
-            'separator'           => '',
-            'show_topic_count'    => true,
-            'show_reply_count'    => false,
-        )); ?>
-            </ul>
-        </div>
+		<?php do_action( 'bbp_theme_after_forum_content' ); ?>
 
-        <?php do_action( 'bbp_theme_after_forum_sub_forums' ); ?>
+	</div><!-- .bbp-forum-content -->
 
-		</span>
-
-</div>
+</div><!-- #post-<?php bbp_forum_id(); ?> -->
