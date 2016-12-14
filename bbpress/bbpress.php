@@ -37,7 +37,7 @@
                     <a class="btn btn-danger" data-toggle="modal" data-target="#registracija"><?php _e( 'Register', 'bbpress' ); ?></a>
                 </div>
             <?php endif; ?>
-            <a class="navbar-brand" href="<?php echo esc_url(home_url(bbp_get_root_slug())); ?>" title="<?php bloginfo('name'); ?>" data-toggle="tooltip" data-placement="bottom"></a>
+            <a class="navbar-brand" href="<?php echo esc_url(home_url(bbp_get_root_slug())); ?>" title="<?php bloginfo('name'); ?>" data-toggle="tooltip" data-placement="bottom"><?php bloginfo('name'); ?></a>
         </div>
         <div class="collapse navbar-collapse" id="navmeni">
                 <form role="search" method="get" id="bbp-searchform" action="<?php echo esc_url( home_url(bbp_get_root_slug()) ); ?>" class="pretraga navbar-form navbar-nav hidden-xs hidden-sm">
