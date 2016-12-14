@@ -8,13 +8,12 @@
  */
 
 ?>
-<ul id="bbp-topic-<?php bbp_topic_id(); ?>" class="list-unstyled">
-<li>
+<div id="bbp-topic-<?php bbp_topic_id(); ?>" <?php bbp_topic_class(); ?>>
 <div class="teme">
 <div class="row">
 <div class="col-md-12">
 <div class="avatar pull-left">
-<?php bbp_topic_author_link( array( 'post_id' => bbp_get_topic_last_active_id(), 'type' => 'avatar', 'size' => 50 ) ); ?>
+<?php bbp_topic_author_link( array( 'post_id' => bbp_get_topic_last_active_id(), 'type' => 'avatar', 'size' => 40 ) ); ?>
 <span class="status">
 <?php do_action( 'bbp_theme_before_topic_title' ); ?>
 </span>
@@ -44,14 +43,14 @@
 <?php endif; ?>
 </div>
 <div class="poruka">
-<span class="naziv">
+<div class="naziv">
 <a href="<?php bbp_topic_permalink(); ?>"><?php bbp_topic_title(); ?></a>
 <span class="hidden-xs">
 <?php do_action( 'bbp_theme_after_topic_title' ); ?>
 </span>
 <?php bbp_topic_pagination(); ?>
-</span>
-<p>
+</div>
+
 <span class="ime">
 <i class="fa fa-reply" aria-hidden="true"></i>
 <?php bbp_author_link( array( 'post_id' => bbp_get_topic_last_active_id(), 'type' => 'name') ); ?>
@@ -61,7 +60,7 @@
 <?php bbp_topic_freshness_link(); ?>
 <?php do_action( 'bbp_theme_after_topic_freshness_link' ); ?>
 </span>
-</p>
+
 <p class="hidden-sm hidden-md hidden-lg">
 <?php do_action( 'bbp_theme_after_topic_title' ); ?>
 <?php if ( !bbp_is_single_forum() || ( bbp_get_topic_forum_id() !== bbp_get_forum_id() ) ) : ?>
@@ -83,5 +82,4 @@
 </div>
 </div>
 </div>
-</li>
-</ul>
+</div>

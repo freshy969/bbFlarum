@@ -116,13 +116,13 @@ hr {
 
 .navbar-default .navbar-toggle {
     border-color:transparent;
-    color:#8C8C92;
+    color:#8C8C8C;
     border-radius:4px;
 }
 
 .navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus {
     background-color:#EDEDED;
-    color:#8C8C92;
+    color:#8C8C8C;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -285,14 +285,14 @@ hr {
 .btn-default,.btn-default:focus,.btn-default.focus,.btn-default:hover,.btn-default:active,.btn-default.active,.btn-default:active:hover,.btn-default.active:hover,.open > .dropdown-toggle.btn-default:hover,.btn-default:active:focus,.btn-default.active:focus,.open > .dropdown-toggle.btn-default:focus,.btn-default:active.focus,.btn-default.active.focus,.open > .dropdown-toggle.btn-default.focus {
     font-weight:400;
     border-radius:4px;
-    color:#8C8C92;
+    color:#8C8C8C;
     cursor:pointer;
     background:#EDEDED;
     border:1px solid #EDEDED;
 }
 
 .btn-default:hover {
-    color:#8C8C92;
+    color:#8C8C8C;
     background:#E0E0E0;
     border:1px solid #E0E0E0;
 }
@@ -446,43 +446,13 @@ hr {
     color:#000;
 }
 
-.dobrodosli {
-    margin-top:-40px;
-    padding-top:40px;
-    padding-bottom:40px;
-    background:#EDEDED;
-    color:#8C8C8C;
-    margin-bottom:40px;
-}
-.dobrodosli a {
-    color:#000;
-    text-decoration: underline;
-}
-.dobrodosli h1 {
-    margin:0;
-    font-size:20px;
-    margin-top:5px;
-}
-
-.dobrodosli p {
-    margin-top:5px;
-    margin-bottom:0;
-    padding:0;
-}
-
 .teme {
     padding:15px 10px;
     border-bottom: 1px solid #F1F1F1;
 }
 
 .teme:hover {
-    border-radius:4px;
-    background:#fafafa;
-}
-
-.teme p {
-    margin-bottom:0;
-    margin-top:2px;
+    background: #fafafa;
 }
 
 .teme .avatar img {
@@ -536,14 +506,14 @@ hr {
     padding:2px 6px;
     font-size:11px;
     font-weight:600;
-    color:#fff;
-    background:#000;
+    color:#000;
+    background:#EDEDED;
     margin-right:10px;
     display:inline-block;
 }
 
 .teme .poruka {
-    margin-left:50px;
+    margin-left:55px;
 }
 
 .teme .poruka .naziv a {
@@ -553,15 +523,19 @@ hr {
     margin-right:5px;
 }
 
+.teme .poruka .naziv a:hover {
+    text-decoration: underline;
+}
+
 .teme .poruka .ime i {
     color:#AEAEAE;
-    font-size:11px;
+    font-size:12px;
 }
 
 .teme .poruka .ime a {
     font-weight:600;
     color:#AEAEAE;
-    font-size:12px;
+    font-size:13px;
     margin-right:5px;
 }
 
@@ -571,14 +545,13 @@ hr {
 
 .teme .poruka .vrijeme a {
     color:#AEAEAE;
-    font-size:12px;
-    margin-right:10px;
+    font-size:13px;
 }
 
 .teme .poruka .excerpt {
+    margin-top: 5px;
     color:#AEAEAE;
     font-size:13px;
-    margin-top: 5px;
 }
 
 .teme .kategorija {
@@ -605,12 +578,6 @@ hr {
     font-size:14px;
 }
 
-.teme .odgovora p {
-    color:#8C8C8C;
-    font-size:10px;
-    font-weight:400;
-}
-
 .teme .omiljeno {
     display:none;
 }
@@ -624,7 +591,6 @@ hr {
     margin-top:-4px;
     color:#8C8C8C;
     font-size:14px;
-    font-weight:600;
     padding:8px 14px;
 }
 
@@ -674,24 +640,26 @@ hr {
 
 .odgovori .avatar img {
     border-radius:50%;
-    margin-right:15px;
 }
 
-.odgovori .ime {
-    margin-top:5px;
-    font-size:14px;
+.odgovori .odgovor {
+    margin-left:65px;
+    font-size:15px;
+    color:#555;
+    word-wrap:break-word;
+    height:auto;
+    overflow:hide;
+}
+
+.odgovori .odgovor .ime {
     font-weight:600;
 }
 
-.odgovori .ime .vreme {
+.odgovori .odgovor .vrijeme {
     font-weight:400;
     color:#AEAEAE;
-    font-size:14px;
-    margin-left:5px;
-}
-
-.odgovori .funkcije {
-    margin-top:-3px;
+    font-size:13px;
+    margin-bottom: 5px;
 }
 
 .odgovori .status .fa-wrench {
@@ -708,24 +676,23 @@ hr {
     box-shadow:0px 2px 3px 0 rgba(0,0,0,0.3);
 }
 
-.odgovori .odgovor {
-    margin-left:65px;
-    margin-top:7px;
-    font-size:15px;
-    color:#555;
-    word-wrap:break-word;
-    height:auto;
-    overflow:hide;
-}
-
 .odgovori .odgovor strong {
     color:#000;
 }
 
 .odgovori .odgovor pre {
-    color:#000;
+    color:#8C8C8C;
     background-color:#EDEDED;
-    border:1px solid #EDEDED;
+    border:2px solid #EDEDED;
+    padding:10px;
+    -webkit-transition:all 1s ease-in-out;
+    -o-transition:all 1s ease-in-out;
+    transition:all 1s ease-in-out;
+}
+.odgovori .odgovor pre:hover {
+    color:#000;
+    background-color:#fff;
+    border:2px solid #D63030;
     padding:10px;
 }
 
@@ -740,7 +707,7 @@ hr {
 }
 
 .odgovori .odgovor blockquote {
-    border-left:5px solid #8C8C92;
+    border-left:5px solid #8C8C8C;
 }
 
 .odgovori .odgovor .img-thumbnail {
@@ -1058,11 +1025,11 @@ textarea#bbp_reply_content,textarea#bbp_topic_content,textarea#bbp_forum_content
 }
 
 a.subscription-toggle {
-    color:#8C8C92;
+    color:#8C8C8C;
 }
 
 a.favorite-toggle {
-    color:#8C8C92;
+    color:#8C8C8C;
 }
 
 .copyright {

@@ -14,7 +14,7 @@
     <div class="odgovori">
         <div class="row">
 
-            <div class="col-md-12 col-xs-12">
+            <div class="col-md-12">
 
                 <div class="avatar pull-left">
                     <?php do_action( 'bbp_theme_before_reply_author_details' ); ?>
@@ -26,7 +26,7 @@
                 </div>
 
                 <?php if ( is_user_logged_in() ) : ?>
-                    <span class="funkcije pull-right">
+                    <span class="pull-right">
                                     <?php if ( bbp_is_topic(bbp_get_reply_id()) ) : ?>
                                         <bottom class="btn btn-sm btn-default">
                                   <?php bbp_forum_subscription_link( array( 'before' => '', 'subscribe' => '<i class="fa fa-eye" aria-hidden="true"></i> '. translate('Subscribe', bbpress) .'', 'unsubscribe' => '<i class="fa fa-eye-slash" aria-hidden="true"></i> '. translate('Unsubscribe', bbpress) .' ' ) ); ?>
@@ -47,12 +47,12 @@
                                 </span>
                 <?php endif; ?>
 
+                <div class="odgovor">
+
                 <div class="ime">
                     <?php bbp_reply_author_link( array( 'type' => 'name' ) ); ?>
-                    <span class="vreme"> pre <?php bbp_reply_post_date(0, true); ?></span>
                 </div>
-
-                <div class="odgovor">
+                    <div class="vrijeme"> pre <?php bbp_reply_post_date(0, true); ?></div>
                     <?php do_action( 'bbp_theme_before_reply_content' ); ?>
                     <?php bbp_reply_content(); ?>
                     <?php do_action( 'bbp_theme_after_reply_content' ); ?>
