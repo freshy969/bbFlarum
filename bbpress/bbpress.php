@@ -24,7 +24,7 @@
             <button class="btn navbar-btn navbar-toggle collapsed" data-toggle="collapse" data-target="#loginregister" aria-expanded="false"><i class="fa fa-user-plus" aria-hidden="true"></i></button>
             <?php endif; ?>
             <button class="btn navbar-btn navbar-toggle collapsed" data-toggle="collapse" data-target="#pretraga" aria-expanded="false"><i class="fa fa-search" aria-hidden="true"></i></button>
-            <a class="navbar-brand" href="<?php echo esc_url(home_url(bbp_get_root_slug())); ?>" title="<?php bloginfo('name'); ?>" data-toggle="tooltip" data-placement="bottom"></a>
+            <a class="navbar-brand" href="<?php echo esc_url(home_url(bbp_get_root_slug())); ?>" title="<?php bloginfo('name'); ?>" data-toggle="tooltip" data-placement="bottom"><?php bloginfo('name'); ?></a>
         </div>
         <div class="collapse navbar-collapse navbar-left" id="pretraga">
             <form role="search" method="get" id="bbp-searchform" action="<?php echo esc_url( home_url(bbp_get_root_slug()) ); ?>" class="pretraga navbar-form navbar-nav">
