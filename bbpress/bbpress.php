@@ -42,8 +42,22 @@
                             <?php echo get_avatar(wp_get_current_user()->user_email, 32 ); ?> <?php echo wp_get_current_user()->display_name; ?>
                         </a>
                         <ul class="dropdown-menu">
-                            <li <?php if (bbp_is_single_user_edit()) { echo ' class="active"'; } ?>><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>"><i class="fa fa-user" aria-hidden="true"></i> <?php _e( 'Profile', 'bbpress' ); ?></a></li>
-                            <li><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>edit"><i class="fa fa-cog" aria-hidden="true"></i> <?php _e( 'Settings', 'bbpress' ); ?></a></li>
+                            <li class="<?php if (bbp_is_single_user_profile()) :?>active<?php endif; ?>"><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>"><i class="fa fa-user" aria-hidden="true"></i> <?php _e( 'Profile', 'bbpress' ); ?></a></li>
+                            <li class="<?php if (bbp_is_single_user_edit()) :?>active<?php endif; ?>"><a href="<?php echo bbp_get_user_profile_url(get_current_user_id()); ?>edit"><i class="fa fa-cog" aria-hidden="true"></i> <?php _e( 'Settings', 'bbpress' ); ?></a></li>
+                            <li role="separator" class="divider"></li>
+
+                            <?php if (bbp_is_favorites_active()) : ?>
+                            <li class="<?php if (bbp_is_favorites()) :?>active<?php endif; ?>">
+                            <a href="<?php echo bbp_favorites_permalink(get_current_user_id()); ?>" title="<?php printf( esc_attr__( "%s's Favorites", 'bbpress' ), bbp_get_displayed_user_field( 'display_name' ) ); ?>"><i class="fa fa-star-o" aria-hidden="true"></i> <?php _e( 'Favorites', 'bbpress' ); ?></a>
+                            </li>
+                            <?php endif; ?>
+
+                            <?php if (bbp_is_subscriptions_active()) : ?>
+                            <li class="<?php if (bbp_is_subscriptions()) :?>active<?php endif; ?>">
+                            <a href="<?php echo bbp_subscriptions_permalink(get_current_user_id()); ?>" title="<?php printf( esc_attr__( "%s's Subscriptions", 'bbpress' ), bbp_get_displayed_user_field( 'display_name' ) ); ?>"><i class="fa fa-eye" aria-hidden="true"></i> <?php _e( 'Subscriptions', 'bbpress' ); ?></a>
+                            </li>
+                            <?php endif; ?>
+
                             <li role="separator" class="divider"></li>
                             <li><a href="<?php echo wp_logout_url(); ?>"><i class="fa fa-sign-out"></i> <?php _e( 'Log Out', 'bbpress' ); ?></a></li>
                         </ul>
