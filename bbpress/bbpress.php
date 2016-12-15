@@ -18,35 +18,23 @@
     <div class="container">
         <div class="navbar-header">
             <?php if (is_user_logged_in()) : ?>
-                <ul class="nav navbar-nav navbar-toggle">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle navbar-gravatar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <?php echo get_avatar(wp_get_current_user()->user_email, 32 ); ?> <?php echo wp_get_current_user()->display_name; ?>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li <?php if (bbp_is_single_user_edit()) { echo ' class="active"'; } ?>><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>"><i class="fa fa-user" aria-hidden="true"></i> <?php _e( 'Profile', 'bbpress' ); ?></a></li>
-                            <li><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>edit"><i class="fa fa-cog" aria-hidden="true"></i> <?php _e( 'Settings', 'bbpress' ); ?></a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="<?php echo wp_logout_url(); ?>"><i class="fa fa-sign-out"></i> <?php _e( 'Log Out', 'bbpress' ); ?></a></li>
-                        </ul>
-                    </li>
-                </ul>
+            <button class="btn navbar-btn navbar-toggle collapsed" data-toggle="collapse" data-target="#korisnik" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i></button>
             <?php else : ?>
-                <div class="btn-group navbar-btn navbar-toggle">
-                    <a class="btn btn-default" data-toggle="modal" data-target="#prijava"><?php _e( 'Log In', 'bbpress' ); ?></a>
-                    <a class="btn btn-danger" data-toggle="modal" data-target="#registracija"><?php _e( 'Register', 'bbpress' ); ?></a>
-                </div>
+            <button class="btn navbar-btn navbar-toggle collapsed" data-toggle="collapse" data-target="#loginregister" aria-expanded="false"><i class="fa fa-user-plus" aria-hidden="true"></i></button>
             <?php endif; ?>
-            <a class="navbar-brand" href="<?php echo esc_url(home_url(bbp_get_root_slug())); ?>" title="<?php bloginfo('name'); ?>" data-toggle="tooltip" data-placement="bottom"><?php bloginfo('name'); ?></a>
+            <button class="btn navbar-btn navbar-toggle collapsed" data-toggle="collapse" data-target="#pretraga" aria-expanded="false"><i class="fa fa-search" aria-hidden="true"></i></button>
+            <a class="navbar-brand" href="<?php echo esc_url(home_url(bbp_get_root_slug())); ?>" title="<?php bloginfo('name'); ?>" data-toggle="tooltip" data-placement="bottom"></a>
         </div>
-        <div class="collapse navbar-collapse" id="navmeni">
-                <form role="search" method="get" id="bbp-searchform" action="<?php echo esc_url( home_url(bbp_get_root_slug()) ); ?>" class="pretraga navbar-form navbar-nav hidden-xs hidden-sm">
-                    <div class="form-group has-feedback has-feedback-left">
-                        <input data-toggle="tooltip" data-placement="right" title="<?php _e( 'Search', 'bbpress' ); ?>" type="text" name="ts" id="ts" size="30" class="form-control">
-                        <span class="fa fa-search form-control-feedback" aria-hidden="true"></span>
-                    </div>
-                </form>
-            <?php if (is_user_logged_in()) : ?>
+        <div class="collapse navbar-collapse navbar-left" id="pretraga">
+            <form role="search" method="get" id="bbp-searchform" action="<?php echo esc_url( home_url(bbp_get_root_slug()) ); ?>" class="pretraga navbar-form navbar-nav">
+                <div class="form-group has-feedback has-feedback-left">
+                    <input data-toggle="tooltip" data-placement="right" title="<?php _e( 'Search', 'bbpress' ); ?>" type="text" name="ts" id="ts" size="30" class="form-control">
+                    <span class="fa fa-search form-control-feedback" aria-hidden="true"></span>
+                </div>
+            </form>
+        </div>
+        <?php if (is_user_logged_in()) : ?>
+            <div class="collapse navbar-collapse" id="korisnik">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle navbar-gravatar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -60,13 +48,15 @@
                         </ul>
                     </li>
                 </ul>
-            <?php else : ?>
-                <div class="btn-group navbar-btn pull-right">
+            </div>
+        <?php else : ?>
+            <div class="collapse navbar-collapse navbar-right" id="loginregister">
+                <div class="btn-group navbar-btn">
                     <a class="btn btn-default" data-toggle="modal" data-target="#prijava"><?php _e( 'Log In', 'bbpress' ); ?></a>
                     <a class="btn btn-danger" data-toggle="modal" data-target="#registracija"><?php _e( 'Register', 'bbpress' ); ?></a>
                 </div>
-            <?php endif; ?>
-        </div>
+            </div>
+        <?php endif; ?>
     </div>
 </nav>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
