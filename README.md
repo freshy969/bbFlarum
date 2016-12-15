@@ -7,11 +7,10 @@
 5. Install Yoast SEO and config Post Types > Custom Post Type Archives for Forum page title and description.
 6. If theme not work fine try to remove <?php wp_head(); ?> or <?php wp_footer(); ?> from bbpress.php
 
-<br><br>
 # Showcase
-http://www.sceko.com/forum/<br>
-https://www.sablja.com/forum/<br>
-http://www.allaboutdogs.net/forum/<br>
-http://muonlineczech.4fan.cz/forum/<br>
-<br><br>
+http://www.sceko.com/forum/
+https://www.sablja.com/forum/
+http://www.allaboutdogs.net/forum/
+http://muonlineczech.4fan.cz/forum/
+
 Send your forum link on info@sceko.com
