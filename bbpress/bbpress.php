@@ -34,7 +34,7 @@
                 </div>
             </form>
         </div>
-        <?php if (is_user_logged_in()) : ?>
+ <?php if (is_user_logged_in()) : ?>
             <div class="collapse navbar-collapse" id="korisnik">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
@@ -44,20 +44,6 @@
                         <ul class="dropdown-menu">
                             <li class="<?php if (bbp_is_single_user_profile()) :?>active<?php endif; ?>"><a href="<?php echo bbp_get_user_profile_url( get_current_user_id() ); ?>"><i class="fa fa-user" aria-hidden="true"></i> <?php _e( 'Profile', 'bbpress' ); ?></a></li>
                             <li class="<?php if (bbp_is_single_user_edit()) :?>active<?php endif; ?>"><a href="<?php echo bbp_get_user_profile_url(get_current_user_id()); ?>edit"><i class="fa fa-cog" aria-hidden="true"></i> <?php _e( 'Settings', 'bbpress' ); ?></a></li>
-                            <li role="separator" class="divider"></li>
-
-                            <?php if (bbp_is_favorites_active()) : ?>
-                            <li class="<?php if (bbp_is_favorites()) :?>active<?php endif; ?>">
-                            <a href="<?php echo bbp_favorites_permalink(get_current_user_id()); ?>" title="<?php printf( esc_attr__( "%s's Favorites", 'bbpress' ), bbp_get_displayed_user_field( 'display_name' ) ); ?>"><i class="fa fa-star-o" aria-hidden="true"></i> <?php _e( 'Favorites', 'bbpress' ); ?></a>
-                            </li>
-                            <?php endif; ?>
-
-                            <?php if (bbp_is_subscriptions_active()) : ?>
-                            <li class="<?php if (bbp_is_subscriptions()) :?>active<?php endif; ?>">
-                            <a href="<?php echo bbp_subscriptions_permalink(get_current_user_id()); ?>" title="<?php printf( esc_attr__( "%s's Subscriptions", 'bbpress' ), bbp_get_displayed_user_field( 'display_name' ) ); ?>"><i class="fa fa-eye" aria-hidden="true"></i> <?php _e( 'Subscriptions', 'bbpress' ); ?></a>
-                            </li>
-                            <?php endif; ?>
-
                             <li role="separator" class="divider"></li>
                             <li><a href="<?php echo wp_logout_url(); ?>"><i class="fa fa-sign-out"></i> <?php _e( 'Log Out', 'bbpress' ); ?></a></li>
                         </ul>
