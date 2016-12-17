@@ -127,7 +127,7 @@ add_filter('registration_errors', 'bbflarum_username', 10, 3);
 
 // Za izdvojene teme opis
 function bbflarum_excerpt($more) {
-    return '<a class="text-lowercase" data-toggle="tooltip" data-placement="bottom" title="' . translate( 'Open this topic', bbpress ) . '" href="'. get_permalink($post->ID) . '">' . __( 'Read more...' ) . '</a>';
+    return ' <a class="text-lowercase" data-toggle="tooltip" data-placement="bottom" title="' . translate( 'Open this topic', bbpress ) . '" href="'. get_permalink($post->ID) . '">' . __( 'Read more...' ) . '</a>';
 }
 add_filter('excerpt_more', 'bbflarum_excerpt');
 
