@@ -8,9 +8,6 @@
 6. If theme not work fine try to remove <?php wp_head(); ?> or <?php wp_footer(); ?> from bbpress.php
 
 # Showcase
-http://www.sceko.com/forum/
-https://www.sablja.com/forum/
 http://www.allaboutdogs.net/forum/
-http://muonlineczech.4fan.cz/forum/
 
 Send your forum link on info@sceko.com
