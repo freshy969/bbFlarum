@@ -6,8 +6,3 @@
 5. On Forums Settings change Forum root should show	to Topics by Freshness and disable Search.
 5. Install Yoast SEO and config Post Types > Custom Post Type Archives for Forum page title and description.
 6. If theme not work fine try to remove <?php wp_head(); ?> or <?php wp_footer(); ?> from bbpress.php
-
-# Showcase
-http://www.allaboutdogs.net/forum/
-
-Send your forum link on info@sceko.com
