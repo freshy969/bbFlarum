@@ -10,7 +10,7 @@ remove_action('wp_head','wp_generator');
 remove_action('wp_head', 'feed_links', 2);
 
 // Micanje verzije
-function bbflarum_version($src){
+function bbflarum_version($src) {
     return remove_query_arg('ver', $src);
 }
 add_filter('script_loader_src', 'bbflarum_version');
@@ -37,8 +37,8 @@ function bbflarum_logourl() {
 add_filter('login_headerurl', 'bbflarum_logourl');
 
 // Samo administratorima dozvoljen wp-admin
-function bbflarum_wpadmin(){
-    if ( !current_user_can('edit_posts') ){
+function bbflarum_wpadmin() {
+    if ( !current_user_can('edit_posts')) {
         wp_redirect(home_url(bbp_get_root_slug()));
         exit;
     }
@@ -46,13 +46,13 @@ function bbflarum_wpadmin(){
 add_action('admin_init', 'bbflarum_wpadmin');
 
 // Ediotor
-function bbflarum_editor( $args = array() ) {
+function bbflarum_editor($args = array()) {
     $args['tinymce'] = true;
     $args['quicktags'] = true;
     $args['media_buttons'] = true;
     return $args;
 }
-add_filter( 'bbp_after_get_the_content_parse_args', 'bbflarum_editor' );
+add_filter('bbp_after_get_the_content_parse_args', 'bbflarum_editor');
 
 // Nova tema
 function bbflarum_novo() {
@@ -136,5 +136,10 @@ function bbflarum_length($length) {
     return 40;
 }
 add_filter('excerpt_length', 'bbflarum_length', 999);
+
+// Uklanjanje jquery od wordpress
+wp_deregister_script('jquery');
+wp_register_script('jquery', '');
+wp_enqueue_script('jquery');
 
 ?>
